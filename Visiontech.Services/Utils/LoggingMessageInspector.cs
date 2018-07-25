@@ -10,16 +10,24 @@ namespace Visiontech.Services.Utils
     public class LoggingMessageInspector : IClientMessageInspector
     {
 
+        public bool Enabled { set; get; }
+
         public void AfterReceiveReply(ref Message reply, object correlationState)
         {
-            Debug.WriteLine("REPLY :");
-            Debug.WriteLine(reply);
+            if (ReferenceEquals(true, Enabled))
+            {
+                Debug.WriteLine("REPLY :");
+                Debug.WriteLine(reply);
+            }
         }
 
         public object BeforeSendRequest(ref Message request, IClientChannel channel)
         {
-            Debug.WriteLine("REQUEST :");
-            Debug.WriteLine(request);
+            if (ReferenceEquals(true, Enabled))
+            {
+                Debug.WriteLine("REQUEST :");
+                Debug.WriteLine(request);
+            }
             return null;
         }
 
