@@ -8,41 +8,99 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Org.Visiontech.Person
+namespace Org.Visiontech.BusinessProfile
 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", ConfigurationName="Org.Visiontech.Person.PersonSoap")]
-    public interface PersonSoap
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", ConfigurationName="Org.Visiontech.BusinessProfile.BusinessProfileSoap")]
+    public interface BusinessProfileSoap
     {
         
         // CODEGEN: Il parametro 'arg0' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
-        Org.Visiontech.Person.deleteResponse delete(Org.Visiontech.Person.delete request);
+        Org.Visiontech.BusinessProfile.deleteResponse delete(Org.Visiontech.BusinessProfile.delete request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Person.editResponse edit(Org.Visiontech.Person.edit request);
+        Org.Visiontech.BusinessProfile.editResponse edit(Org.Visiontech.BusinessProfile.edit request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Person.findResponse find(Org.Visiontech.Person.find request);
+        Org.Visiontech.BusinessProfile.findResponse find(Org.Visiontech.BusinessProfile.find request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Person.createResponse create(Org.Visiontech.Person.create request);
+        Org.Visiontech.BusinessProfile.createResponse create(Org.Visiontech.BusinessProfile.create request);
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class businessProfileDTO : validableDTO
+    {
+        
+        private string businessNameField;
+        
+        private personDTO personField;
+        
+        private string vatCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string businessName
+        {
+            get
+            {
+                return this.businessNameField;
+            }
+            set
+            {
+                this.businessNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public personDTO person
+        {
+            get
+            {
+                return this.personField;
+            }
+            set
+            {
+                this.personField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string vatCode
+        {
+            get
+            {
+                return this.vatCodeField;
+            }
+            set
+            {
+                this.vatCodeField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -61,6 +119,7 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(businessProfileDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -107,6 +166,7 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(businessProfileDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -154,6 +214,7 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(businessProfileDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -202,6 +263,7 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(businessProfileDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -251,6 +313,7 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(businessProfileDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -322,6 +385,7 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(businessProfileDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -713,13 +777,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] arg0;
+        public Org.Visiontech.BusinessProfile.businessProfileDTO[] arg0;
         
         public delete()
         {
         }
         
-        public delete(Org.Visiontech.Person.personDTO[] arg0)
+        public delete(Org.Visiontech.BusinessProfile.businessProfileDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -746,13 +810,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] arg0;
+        public Org.Visiontech.BusinessProfile.businessProfileDTO[] arg0;
         
         public edit()
         {
         }
         
-        public edit(Org.Visiontech.Person.personDTO[] arg0)
+        public edit(Org.Visiontech.BusinessProfile.businessProfileDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -767,13 +831,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] @return;
+        public Org.Visiontech.BusinessProfile.businessProfileDTO[] @return;
         
         public editResponse()
         {
         }
         
-        public editResponse(Org.Visiontech.Person.personDTO[] @return)
+        public editResponse(Org.Visiontech.BusinessProfile.businessProfileDTO[] @return)
         {
             this.@return = @return;
         }
@@ -788,7 +852,7 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.findCriteriaDTO[] arg0;
+        public Org.Visiontech.BusinessProfile.findCriteriaDTO[] arg0;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -802,7 +866,7 @@ namespace Org.Visiontech.Person
         {
         }
         
-        public find(Org.Visiontech.Person.findCriteriaDTO[] arg0, int arg1, int arg2)
+        public find(Org.Visiontech.BusinessProfile.findCriteriaDTO[] arg0, int arg1, int arg2)
         {
             this.arg0 = arg0;
             this.arg1 = arg1;
@@ -819,13 +883,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.findResultDTO @return;
+        public Org.Visiontech.BusinessProfile.findResultDTO @return;
         
         public findResponse()
         {
         }
         
-        public findResponse(Org.Visiontech.Person.findResultDTO @return)
+        public findResponse(Org.Visiontech.BusinessProfile.findResultDTO @return)
         {
             this.@return = @return;
         }
@@ -840,13 +904,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] arg0;
+        public Org.Visiontech.BusinessProfile.businessProfileDTO[] arg0;
         
         public create()
         {
         }
         
-        public create(Org.Visiontech.Person.personDTO[] arg0)
+        public create(Org.Visiontech.BusinessProfile.businessProfileDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -861,106 +925,106 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] @return;
+        public Org.Visiontech.BusinessProfile.businessProfileDTO[] @return;
         
         public createResponse()
         {
         }
         
-        public createResponse(Org.Visiontech.Person.personDTO[] @return)
+        public createResponse(Org.Visiontech.BusinessProfile.businessProfileDTO[] @return)
         {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface PersonSoapChannel : Org.Visiontech.Person.PersonSoap, System.ServiceModel.IClientChannel
+    public interface BusinessProfileSoapChannel : Org.Visiontech.BusinessProfile.BusinessProfileSoap, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class PersonSoapClient : System.ServiceModel.ClientBase<Org.Visiontech.Person.PersonSoap>, Org.Visiontech.Person.PersonSoap
+    public partial class BusinessProfileSoapClient : System.ServiceModel.ClientBase<Org.Visiontech.BusinessProfile.BusinessProfileSoap>, Org.Visiontech.BusinessProfile.BusinessProfileSoap
     {
         
-        public PersonSoapClient()
+        public BusinessProfileSoapClient()
         {
         }
         
-        public PersonSoapClient(string endpointConfigurationName) : 
+        public BusinessProfileSoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
         }
         
-        public PersonSoapClient(string endpointConfigurationName, string remoteAddress) : 
+        public BusinessProfileSoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress)
         {
         }
         
-        public PersonSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public BusinessProfileSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress)
         {
         }
         
-        public PersonSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public BusinessProfileSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.deleteResponse Org.Visiontech.Person.PersonSoap.delete(Org.Visiontech.Person.delete request)
+        Org.Visiontech.BusinessProfile.deleteResponse Org.Visiontech.BusinessProfile.BusinessProfileSoap.delete(Org.Visiontech.BusinessProfile.delete request)
         {
             return base.Channel.delete(request);
         }
         
-        public void delete(Org.Visiontech.Person.personDTO[] arg0)
+        public void delete(Org.Visiontech.BusinessProfile.businessProfileDTO[] arg0)
         {
-            Org.Visiontech.Person.delete inValue = new Org.Visiontech.Person.delete();
+            Org.Visiontech.BusinessProfile.delete inValue = new Org.Visiontech.BusinessProfile.delete();
             inValue.arg0 = arg0;
-            Org.Visiontech.Person.deleteResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).delete(inValue);
+            Org.Visiontech.BusinessProfile.deleteResponse retVal = ((Org.Visiontech.BusinessProfile.BusinessProfileSoap)(this)).delete(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.editResponse Org.Visiontech.Person.PersonSoap.edit(Org.Visiontech.Person.edit request)
+        Org.Visiontech.BusinessProfile.editResponse Org.Visiontech.BusinessProfile.BusinessProfileSoap.edit(Org.Visiontech.BusinessProfile.edit request)
         {
             return base.Channel.edit(request);
         }
         
-        public Org.Visiontech.Person.personDTO[] edit(Org.Visiontech.Person.personDTO[] arg0)
+        public Org.Visiontech.BusinessProfile.businessProfileDTO[] edit(Org.Visiontech.BusinessProfile.businessProfileDTO[] arg0)
         {
-            Org.Visiontech.Person.edit inValue = new Org.Visiontech.Person.edit();
+            Org.Visiontech.BusinessProfile.edit inValue = new Org.Visiontech.BusinessProfile.edit();
             inValue.arg0 = arg0;
-            Org.Visiontech.Person.editResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).edit(inValue);
+            Org.Visiontech.BusinessProfile.editResponse retVal = ((Org.Visiontech.BusinessProfile.BusinessProfileSoap)(this)).edit(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.findResponse Org.Visiontech.Person.PersonSoap.find(Org.Visiontech.Person.find request)
+        Org.Visiontech.BusinessProfile.findResponse Org.Visiontech.BusinessProfile.BusinessProfileSoap.find(Org.Visiontech.BusinessProfile.find request)
         {
             return base.Channel.find(request);
         }
         
-        public Org.Visiontech.Person.findResultDTO find(Org.Visiontech.Person.findCriteriaDTO[] arg0, int arg1, int arg2)
+        public Org.Visiontech.BusinessProfile.findResultDTO find(Org.Visiontech.BusinessProfile.findCriteriaDTO[] arg0, int arg1, int arg2)
         {
-            Org.Visiontech.Person.find inValue = new Org.Visiontech.Person.find();
+            Org.Visiontech.BusinessProfile.find inValue = new Org.Visiontech.BusinessProfile.find();
             inValue.arg0 = arg0;
             inValue.arg1 = arg1;
             inValue.arg2 = arg2;
-            Org.Visiontech.Person.findResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).find(inValue);
+            Org.Visiontech.BusinessProfile.findResponse retVal = ((Org.Visiontech.BusinessProfile.BusinessProfileSoap)(this)).find(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.createResponse Org.Visiontech.Person.PersonSoap.create(Org.Visiontech.Person.create request)
+        Org.Visiontech.BusinessProfile.createResponse Org.Visiontech.BusinessProfile.BusinessProfileSoap.create(Org.Visiontech.BusinessProfile.create request)
         {
             return base.Channel.create(request);
         }
         
-        public Org.Visiontech.Person.personDTO[] create(Org.Visiontech.Person.personDTO[] arg0)
+        public Org.Visiontech.BusinessProfile.businessProfileDTO[] create(Org.Visiontech.BusinessProfile.businessProfileDTO[] arg0)
         {
-            Org.Visiontech.Person.create inValue = new Org.Visiontech.Person.create();
+            Org.Visiontech.BusinessProfile.create inValue = new Org.Visiontech.BusinessProfile.create();
             inValue.arg0 = arg0;
-            Org.Visiontech.Person.createResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).create(inValue);
+            Org.Visiontech.BusinessProfile.createResponse retVal = ((Org.Visiontech.BusinessProfile.BusinessProfileSoap)(this)).create(inValue);
             return retVal.@return;
         }
     }

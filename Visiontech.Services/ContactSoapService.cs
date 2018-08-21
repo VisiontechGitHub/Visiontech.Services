@@ -8,59 +8,139 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Org.Visiontech.Person
+namespace Org.Visiontech.Contact
 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", ConfigurationName="Org.Visiontech.Person.PersonSoap")]
-    public interface PersonSoap
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", ConfigurationName="Org.Visiontech.Contact.ContactSoap")]
+    public interface ContactSoap
     {
         
         // CODEGEN: Il parametro 'arg0' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
-        Org.Visiontech.Person.deleteResponse delete(Org.Visiontech.Person.delete request);
+        Org.Visiontech.Contact.deleteResponse delete(Org.Visiontech.Contact.delete request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Person.editResponse edit(Org.Visiontech.Person.edit request);
+        Org.Visiontech.Contact.editResponse edit(Org.Visiontech.Contact.edit request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Person.findResponse find(Org.Visiontech.Person.find request);
+        Org.Visiontech.Contact.findResponse find(Org.Visiontech.Contact.find request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Person.createResponse create(Org.Visiontech.Person.create request);
+        Org.Visiontech.Contact.createResponse create(Org.Visiontech.Contact.create request);
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personContactDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class personDTO : validableDTO
+    public partial class contactDTO : codifiableDTO
     {
+        
+        private contactType typeField;
+        
+        private bool typeFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public contactType type
+        {
+            get
+            {
+                return this.typeField;
+            }
+            set
+            {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool typeSpecified
+        {
+            get
+            {
+                return this.typeFieldSpecified;
+            }
+            set
+            {
+                this.typeFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public enum contactType
+    {
+        
+        /// <remarks/>
+        PHONE,
+        
+        /// <remarks/>
+        CELLPHONE,
+        
+        /// <remarks/>
+        EMAIL,
+        
+        /// <remarks/>
+        UNKNOWN,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personContactDTO))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public abstract partial class codifiableDTO : validableDTO
+    {
+        
+        private string codeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string code
+        {
+            get
+            {
+                return this.codeField;
+            }
+            set
+            {
+                this.codeField = value;
+            }
+        }
     }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personContactDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -105,8 +185,9 @@ namespace Org.Visiontech.Person
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personContactDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -152,8 +233,9 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personContactDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -200,8 +282,9 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personContactDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -249,8 +332,9 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personContactDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -309,19 +393,20 @@ namespace Org.Visiontech.Person
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(findResultDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(findCriteriaDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(relationalCriteriaDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(rangeCriteriaDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(simpleCriteriaDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(findResultDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(identifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(createdDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personContactDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -329,6 +414,64 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
     public abstract partial class jsonbPolimorphic
     {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class findResultDTO : jsonbPolimorphic
+    {
+        
+        private long countField;
+        
+        private bool countFieldSpecified;
+        
+        private identifiableDTO[] resultsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public long count
+        {
+            get
+            {
+                return this.countField;
+            }
+            set
+            {
+                this.countField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool countSpecified
+        {
+            get
+            {
+                return this.countFieldSpecified;
+            }
+            set
+            {
+                this.countFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("results", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+        public identifiableDTO[] results
+        {
+            get
+            {
+                return this.resultsField;
+            }
+            set
+            {
+                this.resultsField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -503,65 +646,7 @@ namespace Org.Visiontech.Person
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class findResultDTO : jsonbPolimorphic
-    {
-        
-        private long countField;
-        
-        private bool countFieldSpecified;
-        
-        private identifiableDTO[] resultsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public long count
-        {
-            get
-            {
-                return this.countField;
-            }
-            set
-            {
-                this.countField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool countSpecified
-        {
-            get
-            {
-                return this.countFieldSpecified;
-            }
-            set
-            {
-                this.countFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("results", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
-        public identifiableDTO[] results
-        {
-            get
-            {
-                return this.resultsField;
-            }
-            set
-            {
-                this.resultsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class legalPersonDTO : personDTO
+    public partial class personDTO : validableDTO
     {
     }
     
@@ -571,137 +656,24 @@ namespace Org.Visiontech.Person
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class naturalPersonDTO : personDTO
+    public partial class personContactDTO : contactDTO
     {
         
-        private System.DateTime birthField;
-        
-        private bool birthFieldSpecified;
-        
-        private string firstnameField;
-        
-        private gender genderField;
-        
-        private bool genderFieldSpecified;
-        
-        private string surnameField;
-        
-        private string taxCodeField;
+        private personDTO personField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime birth
+        public personDTO person
         {
             get
             {
-                return this.birthField;
+                return this.personField;
             }
             set
             {
-                this.birthField = value;
+                this.personField = value;
             }
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool birthSpecified
-        {
-            get
-            {
-                return this.birthFieldSpecified;
-            }
-            set
-            {
-                this.birthFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string firstname
-        {
-            get
-            {
-                return this.firstnameField;
-            }
-            set
-            {
-                this.firstnameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public gender gender
-        {
-            get
-            {
-                return this.genderField;
-            }
-            set
-            {
-                this.genderField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool genderSpecified
-        {
-            get
-            {
-                return this.genderFieldSpecified;
-            }
-            set
-            {
-                this.genderFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string surname
-        {
-            get
-            {
-                return this.surnameField;
-            }
-            set
-            {
-                this.surnameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string taxCode
-        {
-            get
-            {
-                return this.taxCodeField;
-            }
-            set
-            {
-                this.taxCodeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public enum gender
-    {
-        
-        /// <remarks/>
-        MALE,
-        
-        /// <remarks/>
-        FEMALE,
-        
-        /// <remarks/>
-        UNKNOWN,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -713,13 +685,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] arg0;
+        public Org.Visiontech.Contact.contactDTO[] arg0;
         
         public delete()
         {
         }
         
-        public delete(Org.Visiontech.Person.personDTO[] arg0)
+        public delete(Org.Visiontech.Contact.contactDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -746,13 +718,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] arg0;
+        public Org.Visiontech.Contact.contactDTO[] arg0;
         
         public edit()
         {
         }
         
-        public edit(Org.Visiontech.Person.personDTO[] arg0)
+        public edit(Org.Visiontech.Contact.contactDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -767,13 +739,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] @return;
+        public Org.Visiontech.Contact.contactDTO[] @return;
         
         public editResponse()
         {
         }
         
-        public editResponse(Org.Visiontech.Person.personDTO[] @return)
+        public editResponse(Org.Visiontech.Contact.contactDTO[] @return)
         {
             this.@return = @return;
         }
@@ -788,7 +760,7 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.findCriteriaDTO[] arg0;
+        public Org.Visiontech.Contact.findCriteriaDTO[] arg0;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -802,7 +774,7 @@ namespace Org.Visiontech.Person
         {
         }
         
-        public find(Org.Visiontech.Person.findCriteriaDTO[] arg0, int arg1, int arg2)
+        public find(Org.Visiontech.Contact.findCriteriaDTO[] arg0, int arg1, int arg2)
         {
             this.arg0 = arg0;
             this.arg1 = arg1;
@@ -819,13 +791,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.findResultDTO @return;
+        public Org.Visiontech.Contact.findResultDTO @return;
         
         public findResponse()
         {
         }
         
-        public findResponse(Org.Visiontech.Person.findResultDTO @return)
+        public findResponse(Org.Visiontech.Contact.findResultDTO @return)
         {
             this.@return = @return;
         }
@@ -840,13 +812,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] arg0;
+        public Org.Visiontech.Contact.contactDTO[] arg0;
         
         public create()
         {
         }
         
-        public create(Org.Visiontech.Person.personDTO[] arg0)
+        public create(Org.Visiontech.Contact.contactDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -861,106 +833,106 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] @return;
+        public Org.Visiontech.Contact.contactDTO[] @return;
         
         public createResponse()
         {
         }
         
-        public createResponse(Org.Visiontech.Person.personDTO[] @return)
+        public createResponse(Org.Visiontech.Contact.contactDTO[] @return)
         {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface PersonSoapChannel : Org.Visiontech.Person.PersonSoap, System.ServiceModel.IClientChannel
+    public interface ContactSoapChannel : Org.Visiontech.Contact.ContactSoap, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class PersonSoapClient : System.ServiceModel.ClientBase<Org.Visiontech.Person.PersonSoap>, Org.Visiontech.Person.PersonSoap
+    public partial class ContactSoapClient : System.ServiceModel.ClientBase<Org.Visiontech.Contact.ContactSoap>, Org.Visiontech.Contact.ContactSoap
     {
         
-        public PersonSoapClient()
+        public ContactSoapClient()
         {
         }
         
-        public PersonSoapClient(string endpointConfigurationName) : 
+        public ContactSoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
         }
         
-        public PersonSoapClient(string endpointConfigurationName, string remoteAddress) : 
+        public ContactSoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress)
         {
         }
         
-        public PersonSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ContactSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress)
         {
         }
         
-        public PersonSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ContactSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.deleteResponse Org.Visiontech.Person.PersonSoap.delete(Org.Visiontech.Person.delete request)
+        Org.Visiontech.Contact.deleteResponse Org.Visiontech.Contact.ContactSoap.delete(Org.Visiontech.Contact.delete request)
         {
             return base.Channel.delete(request);
         }
         
-        public void delete(Org.Visiontech.Person.personDTO[] arg0)
+        public void delete(Org.Visiontech.Contact.contactDTO[] arg0)
         {
-            Org.Visiontech.Person.delete inValue = new Org.Visiontech.Person.delete();
+            Org.Visiontech.Contact.delete inValue = new Org.Visiontech.Contact.delete();
             inValue.arg0 = arg0;
-            Org.Visiontech.Person.deleteResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).delete(inValue);
+            Org.Visiontech.Contact.deleteResponse retVal = ((Org.Visiontech.Contact.ContactSoap)(this)).delete(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.editResponse Org.Visiontech.Person.PersonSoap.edit(Org.Visiontech.Person.edit request)
+        Org.Visiontech.Contact.editResponse Org.Visiontech.Contact.ContactSoap.edit(Org.Visiontech.Contact.edit request)
         {
             return base.Channel.edit(request);
         }
         
-        public Org.Visiontech.Person.personDTO[] edit(Org.Visiontech.Person.personDTO[] arg0)
+        public Org.Visiontech.Contact.contactDTO[] edit(Org.Visiontech.Contact.contactDTO[] arg0)
         {
-            Org.Visiontech.Person.edit inValue = new Org.Visiontech.Person.edit();
+            Org.Visiontech.Contact.edit inValue = new Org.Visiontech.Contact.edit();
             inValue.arg0 = arg0;
-            Org.Visiontech.Person.editResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).edit(inValue);
+            Org.Visiontech.Contact.editResponse retVal = ((Org.Visiontech.Contact.ContactSoap)(this)).edit(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.findResponse Org.Visiontech.Person.PersonSoap.find(Org.Visiontech.Person.find request)
+        Org.Visiontech.Contact.findResponse Org.Visiontech.Contact.ContactSoap.find(Org.Visiontech.Contact.find request)
         {
             return base.Channel.find(request);
         }
         
-        public Org.Visiontech.Person.findResultDTO find(Org.Visiontech.Person.findCriteriaDTO[] arg0, int arg1, int arg2)
+        public Org.Visiontech.Contact.findResultDTO find(Org.Visiontech.Contact.findCriteriaDTO[] arg0, int arg1, int arg2)
         {
-            Org.Visiontech.Person.find inValue = new Org.Visiontech.Person.find();
+            Org.Visiontech.Contact.find inValue = new Org.Visiontech.Contact.find();
             inValue.arg0 = arg0;
             inValue.arg1 = arg1;
             inValue.arg2 = arg2;
-            Org.Visiontech.Person.findResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).find(inValue);
+            Org.Visiontech.Contact.findResponse retVal = ((Org.Visiontech.Contact.ContactSoap)(this)).find(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.createResponse Org.Visiontech.Person.PersonSoap.create(Org.Visiontech.Person.create request)
+        Org.Visiontech.Contact.createResponse Org.Visiontech.Contact.ContactSoap.create(Org.Visiontech.Contact.create request)
         {
             return base.Channel.create(request);
         }
         
-        public Org.Visiontech.Person.personDTO[] create(Org.Visiontech.Person.personDTO[] arg0)
+        public Org.Visiontech.Contact.contactDTO[] create(Org.Visiontech.Contact.contactDTO[] arg0)
         {
-            Org.Visiontech.Person.create inValue = new Org.Visiontech.Person.create();
+            Org.Visiontech.Contact.create inValue = new Org.Visiontech.Contact.create();
             inValue.arg0 = arg0;
-            Org.Visiontech.Person.createResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).create(inValue);
+            Org.Visiontech.Contact.createResponse retVal = ((Org.Visiontech.Contact.ContactSoap)(this)).create(inValue);
             return retVal.@return;
         }
     }

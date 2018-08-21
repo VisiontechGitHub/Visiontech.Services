@@ -8,59 +8,194 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Org.Visiontech.Person
+namespace Org.Visiontech.Price
 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", ConfigurationName="Org.Visiontech.Person.PersonSoap")]
-    public interface PersonSoap
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", ConfigurationName="Org.Visiontech.Price.PriceSoap")]
+    public interface PriceSoap
     {
         
         // CODEGEN: Il parametro 'arg0' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
-        Org.Visiontech.Person.deleteResponse delete(Org.Visiontech.Person.delete request);
+        Org.Visiontech.Price.deleteResponse delete(Org.Visiontech.Price.delete request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Person.editResponse edit(Org.Visiontech.Person.edit request);
+        Org.Visiontech.Price.editResponse edit(Org.Visiontech.Price.edit request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Person.findResponse find(Org.Visiontech.Person.find request);
+        Org.Visiontech.Price.findResponse find(Org.Visiontech.Price.find request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Person.createResponse create(Org.Visiontech.Person.create request);
+        Org.Visiontech.Price.createResponse create(Org.Visiontech.Price.create request);
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productPriceDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class personDTO : validableDTO
+    public partial class priceDTO : amountDTO
+    {
+        
+        private priceType typeField;
+        
+        private bool typeFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public priceType type
+        {
+            get
+            {
+                return this.typeField;
+            }
+            set
+            {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool typeSpecified
+        {
+            get
+            {
+                return this.typeFieldSpecified;
+            }
+            set
+            {
+                this.typeFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public enum priceType
+    {
+        
+        /// <remarks/>
+        PROVIDER,
+        
+        /// <remarks/>
+        RETAIL,
+        
+        /// <remarks/>
+        SELL,
+        
+        /// <remarks/>
+        UNKNOWN,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(priceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productPriceDTO))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class amountDTO : quantifiableDTO
+    {
+        
+        private currencyDTO currencyField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public currencyDTO currency
+        {
+            get
+            {
+                return this.currencyField;
+            }
+            set
+            {
+                this.currencyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class currencyDTO : codifiableDTO
     {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(currencyDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public abstract partial class codifiableDTO : validableDTO
+    {
+        
+        private string codeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string code
+        {
+            get
+            {
+                return this.codeField;
+            }
+            set
+            {
+                this.codeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(currencyDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(amountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(priceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productPriceDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -104,9 +239,20 @@ namespace Org.Visiontech.Person
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(currencyDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(amountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(priceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productPriceDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -151,9 +297,20 @@ namespace Org.Visiontech.Person
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(currencyDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(amountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(priceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productPriceDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -199,9 +356,20 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(currencyDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(amountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(priceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productPriceDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -248,9 +416,20 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(currencyDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(amountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(priceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productPriceDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -319,9 +498,20 @@ namespace Org.Visiontech.Person
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(currencyDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(amountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(priceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productPriceDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -556,13 +746,52 @@ namespace Org.Visiontech.Person
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(amountDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(priceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(taxedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productPriceDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class legalPersonDTO : personDTO
+    public abstract partial class quantifiableDTO : validableDTO
     {
+        
+        private double quantityField;
+        
+        private bool quantityFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public double quantity
+        {
+            get
+            {
+                return this.quantityField;
+            }
+            set
+            {
+                this.quantityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool quantitySpecified
+        {
+            get
+            {
+                return this.quantityFieldSpecified;
+            }
+            set
+            {
+                this.quantityFieldSpecified = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -571,118 +800,70 @@ namespace Org.Visiontech.Person
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class naturalPersonDTO : personDTO
+    public partial class discountDTO : quantifiableDTO
     {
         
-        private System.DateTime birthField;
+        private discountReason reasonField;
         
-        private bool birthFieldSpecified;
+        private bool reasonFieldSpecified;
         
-        private string firstnameField;
+        private discountType typeField;
         
-        private gender genderField;
-        
-        private bool genderFieldSpecified;
-        
-        private string surnameField;
-        
-        private string taxCodeField;
+        private bool typeFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime birth
+        public discountReason reason
         {
             get
             {
-                return this.birthField;
+                return this.reasonField;
             }
             set
             {
-                this.birthField = value;
+                this.reasonField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool birthSpecified
+        public bool reasonSpecified
         {
             get
             {
-                return this.birthFieldSpecified;
+                return this.reasonFieldSpecified;
             }
             set
             {
-                this.birthFieldSpecified = value;
+                this.reasonFieldSpecified = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string firstname
+        public discountType type
         {
             get
             {
-                return this.firstnameField;
+                return this.typeField;
             }
             set
             {
-                this.firstnameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public gender gender
-        {
-            get
-            {
-                return this.genderField;
-            }
-            set
-            {
-                this.genderField = value;
+                this.typeField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool genderSpecified
+        public bool typeSpecified
         {
             get
             {
-                return this.genderFieldSpecified;
+                return this.typeFieldSpecified;
             }
             set
             {
-                this.genderFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string surname
-        {
-            get
-            {
-                return this.surnameField;
-            }
-            set
-            {
-                this.surnameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string taxCode
-        {
-            get
-            {
-                return this.taxCodeField;
-            }
-            set
-            {
-                this.taxCodeField = value;
+                this.typeFieldSpecified = value;
             }
         }
     }
@@ -691,17 +872,331 @@ namespace Org.Visiontech.Person
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public enum gender
+    public enum discountReason
     {
         
         /// <remarks/>
-        MALE,
+        ARRANGEMENT,
         
         /// <remarks/>
-        FEMALE,
+        LICENSE,
+        
+        /// <remarks/>
+        CATALOGUE,
         
         /// <remarks/>
         UNKNOWN,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public enum discountType
+    {
+        
+        /// <remarks/>
+        PERCENTAGE,
+        
+        /// <remarks/>
+        ABSOLUTE,
+        
+        /// <remarks/>
+        UNKNOWN,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class taxDTO : quantifiableDTO
+    {
+        
+        private taxType typeField;
+        
+        private bool typeFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public taxType type
+        {
+            get
+            {
+                return this.typeField;
+            }
+            set
+            {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool typeSpecified
+        {
+            get
+            {
+                return this.typeFieldSpecified;
+            }
+            set
+            {
+                this.typeFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public enum taxType
+    {
+        
+        /// <remarks/>
+        PERCENTAGE,
+        
+        /// <remarks/>
+        ABSOLUTE,
+        
+        /// <remarks/>
+        UNKNOWN,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public abstract partial class descriptableDTO : codifiableDTO
+    {
+        
+        private string descriptionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string description
+        {
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class providerDTO : descriptableDTO
+    {
+        
+        private bool customField;
+        
+        private bool customFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool custom
+        {
+            get
+            {
+                return this.customField;
+            }
+            set
+            {
+                this.customField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool customSpecified
+        {
+            get
+            {
+                return this.customFieldSpecified;
+            }
+            set
+            {
+                this.customFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class serieDTO : descriptableDTO
+    {
+        
+        private bool customField;
+        
+        private bool customFieldSpecified;
+        
+        private providerDTO providerField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool custom
+        {
+            get
+            {
+                return this.customField;
+            }
+            set
+            {
+                this.customField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool customSpecified
+        {
+            get
+            {
+                return this.customFieldSpecified;
+            }
+            set
+            {
+                this.customFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public providerDTO provider
+        {
+            get
+            {
+                return this.providerField;
+            }
+            set
+            {
+                this.providerField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class productDTO : descriptableDTO
+    {
+        
+        private serieDTO serieField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public serieDTO serie
+        {
+            get
+            {
+                return this.serieField;
+            }
+            set
+            {
+                this.serieField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(discountedPriceDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(productPriceDTO))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class taxedPriceDTO : priceDTO
+    {
+        
+        private taxDTO taxField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public taxDTO tax
+        {
+            get
+            {
+                return this.taxField;
+            }
+            set
+            {
+                this.taxField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class discountedPriceDTO : taxedPriceDTO
+    {
+        
+        private discountDTO discountField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public discountDTO discount
+        {
+            get
+            {
+                return this.discountField;
+            }
+            set
+            {
+                this.discountField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class productPriceDTO : taxedPriceDTO
+    {
+        
+        private productDTO productField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public productDTO product
+        {
+            get
+            {
+                return this.productField;
+            }
+            set
+            {
+                this.productField = value;
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -713,13 +1208,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] arg0;
+        public Org.Visiontech.Price.priceDTO[] arg0;
         
         public delete()
         {
         }
         
-        public delete(Org.Visiontech.Person.personDTO[] arg0)
+        public delete(Org.Visiontech.Price.priceDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -746,13 +1241,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] arg0;
+        public Org.Visiontech.Price.priceDTO[] arg0;
         
         public edit()
         {
         }
         
-        public edit(Org.Visiontech.Person.personDTO[] arg0)
+        public edit(Org.Visiontech.Price.priceDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -767,13 +1262,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] @return;
+        public Org.Visiontech.Price.priceDTO[] @return;
         
         public editResponse()
         {
         }
         
-        public editResponse(Org.Visiontech.Person.personDTO[] @return)
+        public editResponse(Org.Visiontech.Price.priceDTO[] @return)
         {
             this.@return = @return;
         }
@@ -788,7 +1283,7 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.findCriteriaDTO[] arg0;
+        public Org.Visiontech.Price.findCriteriaDTO[] arg0;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -802,7 +1297,7 @@ namespace Org.Visiontech.Person
         {
         }
         
-        public find(Org.Visiontech.Person.findCriteriaDTO[] arg0, int arg1, int arg2)
+        public find(Org.Visiontech.Price.findCriteriaDTO[] arg0, int arg1, int arg2)
         {
             this.arg0 = arg0;
             this.arg1 = arg1;
@@ -819,13 +1314,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.findResultDTO @return;
+        public Org.Visiontech.Price.findResultDTO @return;
         
         public findResponse()
         {
         }
         
-        public findResponse(Org.Visiontech.Person.findResultDTO @return)
+        public findResponse(Org.Visiontech.Price.findResultDTO @return)
         {
             this.@return = @return;
         }
@@ -840,13 +1335,13 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] arg0;
+        public Org.Visiontech.Price.priceDTO[] arg0;
         
         public create()
         {
         }
         
-        public create(Org.Visiontech.Person.personDTO[] arg0)
+        public create(Org.Visiontech.Price.priceDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -861,106 +1356,106 @@ namespace Org.Visiontech.Person
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Person.personDTO[] @return;
+        public Org.Visiontech.Price.priceDTO[] @return;
         
         public createResponse()
         {
         }
         
-        public createResponse(Org.Visiontech.Person.personDTO[] @return)
+        public createResponse(Org.Visiontech.Price.priceDTO[] @return)
         {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface PersonSoapChannel : Org.Visiontech.Person.PersonSoap, System.ServiceModel.IClientChannel
+    public interface PriceSoapChannel : Org.Visiontech.Price.PriceSoap, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class PersonSoapClient : System.ServiceModel.ClientBase<Org.Visiontech.Person.PersonSoap>, Org.Visiontech.Person.PersonSoap
+    public partial class PriceSoapClient : System.ServiceModel.ClientBase<Org.Visiontech.Price.PriceSoap>, Org.Visiontech.Price.PriceSoap
     {
         
-        public PersonSoapClient()
+        public PriceSoapClient()
         {
         }
         
-        public PersonSoapClient(string endpointConfigurationName) : 
+        public PriceSoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
         }
         
-        public PersonSoapClient(string endpointConfigurationName, string remoteAddress) : 
+        public PriceSoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress)
         {
         }
         
-        public PersonSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public PriceSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress)
         {
         }
         
-        public PersonSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public PriceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.deleteResponse Org.Visiontech.Person.PersonSoap.delete(Org.Visiontech.Person.delete request)
+        Org.Visiontech.Price.deleteResponse Org.Visiontech.Price.PriceSoap.delete(Org.Visiontech.Price.delete request)
         {
             return base.Channel.delete(request);
         }
         
-        public void delete(Org.Visiontech.Person.personDTO[] arg0)
+        public void delete(Org.Visiontech.Price.priceDTO[] arg0)
         {
-            Org.Visiontech.Person.delete inValue = new Org.Visiontech.Person.delete();
+            Org.Visiontech.Price.delete inValue = new Org.Visiontech.Price.delete();
             inValue.arg0 = arg0;
-            Org.Visiontech.Person.deleteResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).delete(inValue);
+            Org.Visiontech.Price.deleteResponse retVal = ((Org.Visiontech.Price.PriceSoap)(this)).delete(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.editResponse Org.Visiontech.Person.PersonSoap.edit(Org.Visiontech.Person.edit request)
+        Org.Visiontech.Price.editResponse Org.Visiontech.Price.PriceSoap.edit(Org.Visiontech.Price.edit request)
         {
             return base.Channel.edit(request);
         }
         
-        public Org.Visiontech.Person.personDTO[] edit(Org.Visiontech.Person.personDTO[] arg0)
+        public Org.Visiontech.Price.priceDTO[] edit(Org.Visiontech.Price.priceDTO[] arg0)
         {
-            Org.Visiontech.Person.edit inValue = new Org.Visiontech.Person.edit();
+            Org.Visiontech.Price.edit inValue = new Org.Visiontech.Price.edit();
             inValue.arg0 = arg0;
-            Org.Visiontech.Person.editResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).edit(inValue);
+            Org.Visiontech.Price.editResponse retVal = ((Org.Visiontech.Price.PriceSoap)(this)).edit(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.findResponse Org.Visiontech.Person.PersonSoap.find(Org.Visiontech.Person.find request)
+        Org.Visiontech.Price.findResponse Org.Visiontech.Price.PriceSoap.find(Org.Visiontech.Price.find request)
         {
             return base.Channel.find(request);
         }
         
-        public Org.Visiontech.Person.findResultDTO find(Org.Visiontech.Person.findCriteriaDTO[] arg0, int arg1, int arg2)
+        public Org.Visiontech.Price.findResultDTO find(Org.Visiontech.Price.findCriteriaDTO[] arg0, int arg1, int arg2)
         {
-            Org.Visiontech.Person.find inValue = new Org.Visiontech.Person.find();
+            Org.Visiontech.Price.find inValue = new Org.Visiontech.Price.find();
             inValue.arg0 = arg0;
             inValue.arg1 = arg1;
             inValue.arg2 = arg2;
-            Org.Visiontech.Person.findResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).find(inValue);
+            Org.Visiontech.Price.findResponse retVal = ((Org.Visiontech.Price.PriceSoap)(this)).find(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Person.createResponse Org.Visiontech.Person.PersonSoap.create(Org.Visiontech.Person.create request)
+        Org.Visiontech.Price.createResponse Org.Visiontech.Price.PriceSoap.create(Org.Visiontech.Price.create request)
         {
             return base.Channel.create(request);
         }
         
-        public Org.Visiontech.Person.personDTO[] create(Org.Visiontech.Person.personDTO[] arg0)
+        public Org.Visiontech.Price.priceDTO[] create(Org.Visiontech.Price.priceDTO[] arg0)
         {
-            Org.Visiontech.Person.create inValue = new Org.Visiontech.Person.create();
+            Org.Visiontech.Price.create inValue = new Org.Visiontech.Price.create();
             inValue.arg0 = arg0;
-            Org.Visiontech.Person.createResponse retVal = ((Org.Visiontech.Person.PersonSoap)(this)).create(inValue);
+            Org.Visiontech.Price.createResponse retVal = ((Org.Visiontech.Price.PriceSoap)(this)).create(inValue);
             return retVal.@return;
         }
     }

@@ -8,54 +8,96 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Org.Visiontech.Product
+namespace Org.Visiontech.Stock
 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", ConfigurationName="Org.Visiontech.Product.ProductSoap")]
-    public interface ProductSoap
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", ConfigurationName="Org.Visiontech.Stock.StockSoap")]
+    public interface StockSoap
     {
         
         // CODEGEN: Il parametro 'arg0' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
-        Org.Visiontech.Product.deleteResponse delete(Org.Visiontech.Product.delete request);
+        Org.Visiontech.Stock.deleteResponse delete(Org.Visiontech.Stock.delete request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Product.editResponse edit(Org.Visiontech.Product.edit request);
+        Org.Visiontech.Stock.editResponse edit(Org.Visiontech.Stock.edit request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Product.findResponse find(Org.Visiontech.Product.find request);
+        Org.Visiontech.Stock.findResponse find(Org.Visiontech.Stock.find request);
         
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(jsonbPolimorphic))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        Org.Visiontech.Product.createResponse create(Org.Visiontech.Product.create request);
+        Org.Visiontech.Stock.createResponse create(Org.Visiontech.Stock.create request);
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class stockDTO : quantifiableDTO
+    {
+        
+        private productDTO productField;
+        
+        private storageDTO storageField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public productDTO product
+        {
+            get
+            {
+                return this.productField;
+            }
+            set
+            {
+                this.productField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public storageDTO storage
+        {
+            get
+            {
+                return this.storageField;
+            }
+            set
+            {
+                this.storageField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sunGlassesDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(filterDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactLensDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(treatmentDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(antireflectionDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mirroringDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(scratchproofDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -183,21 +225,22 @@ namespace Org.Visiontech.Product
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(storageDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialTypeDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sunGlassesDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(filterDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactLensDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(treatmentDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(antireflectionDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mirroringDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(scratchproofDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -226,21 +269,22 @@ namespace Org.Visiontech.Product
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(storageDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialTypeDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sunGlassesDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(filterDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactLensDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(treatmentDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(antireflectionDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mirroringDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(scratchproofDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -268,23 +312,26 @@ namespace Org.Visiontech.Product
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(stockDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(storageDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialTypeDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sunGlassesDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(filterDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactLensDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(treatmentDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(antireflectionDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mirroringDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(scratchproofDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -329,23 +376,26 @@ namespace Org.Visiontech.Product
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(stockDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(storageDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialTypeDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sunGlassesDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(filterDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactLensDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(treatmentDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(antireflectionDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mirroringDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(scratchproofDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -391,23 +441,26 @@ namespace Org.Visiontech.Product
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(stockDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(storageDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialTypeDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sunGlassesDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(filterDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactLensDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(treatmentDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(antireflectionDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mirroringDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(scratchproofDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -454,23 +507,26 @@ namespace Org.Visiontech.Product
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(stockDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(storageDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialTypeDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sunGlassesDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(filterDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactLensDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(treatmentDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(antireflectionDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mirroringDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(scratchproofDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -518,23 +574,26 @@ namespace Org.Visiontech.Product
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(stockDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(storageDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialTypeDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sunGlassesDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(filterDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactLensDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(treatmentDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(antireflectionDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mirroringDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(scratchproofDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -595,33 +654,36 @@ namespace Org.Visiontech.Product
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(findResultDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(findCriteriaDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(relationalCriteriaDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(rangeCriteriaDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(simpleCriteriaDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(identifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(createdDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(quantifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(stockDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(storageDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialTypeDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensMaterialDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(providerDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serieDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(productDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sunGlassesDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(filterDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(lensDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(frameDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(contactLensDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(repairDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(treatmentDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(antireflectionDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mirroringDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(scratchproofDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(findCriteriaDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(relationalCriteriaDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(rangeCriteriaDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(simpleCriteriaDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -856,6 +918,59 @@ namespace Org.Visiontech.Product
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(stockDTO))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public abstract partial class quantifiableDTO : validableDTO
+    {
+        
+        private double quantityField;
+        
+        private bool quantityFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public double quantity
+        {
+            get
+            {
+                return this.quantityField;
+            }
+            set
+            {
+                this.quantityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool quantitySpecified
+        {
+            get
+            {
+                return this.quantityFieldSpecified;
+            }
+            set
+            {
+                this.quantityFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class storageDTO : descriptableDTO
+    {
+    }
+    
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -913,8 +1028,72 @@ namespace Org.Visiontech.Product
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class sunGlassesDTO : productDTO
+    public partial class frameDTO : productDTO
     {
+        
+        private double bridgeField;
+        
+        private bool bridgeFieldSpecified;
+        
+        private double lensesDiameterField;
+        
+        private bool lensesDiameterFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public double bridge
+        {
+            get
+            {
+                return this.bridgeField;
+            }
+            set
+            {
+                this.bridgeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool bridgeSpecified
+        {
+            get
+            {
+                return this.bridgeFieldSpecified;
+            }
+            set
+            {
+                this.bridgeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public double lensesDiameter
+        {
+            get
+            {
+                return this.lensesDiameterField;
+            }
+            set
+            {
+                this.lensesDiameterField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool lensesDiameterSpecified
+        {
+            get
+            {
+                return this.lensesDiameterFieldSpecified;
+            }
+            set
+            {
+                this.lensesDiameterFieldSpecified = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -923,7 +1102,7 @@ namespace Org.Visiontech.Product
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class repairDTO : productDTO
+    public partial class sunGlassesDTO : productDTO
     {
     }
     
@@ -1294,80 +1473,6 @@ namespace Org.Visiontech.Product
         
         /// <remarks/>
         UNKNOWN,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class frameDTO : productDTO
-    {
-        
-        private double bridgeField;
-        
-        private bool bridgeFieldSpecified;
-        
-        private double lensesDiameterField;
-        
-        private bool lensesDiameterFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public double bridge
-        {
-            get
-            {
-                return this.bridgeField;
-            }
-            set
-            {
-                this.bridgeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool bridgeSpecified
-        {
-            get
-            {
-                return this.bridgeFieldSpecified;
-            }
-            set
-            {
-                this.bridgeFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public double lensesDiameter
-        {
-            get
-            {
-                return this.lensesDiameterField;
-            }
-            set
-            {
-                this.lensesDiameterField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool lensesDiameterSpecified
-        {
-            get
-            {
-                return this.lensesDiameterFieldSpecified;
-            }
-            set
-            {
-                this.lensesDiameterFieldSpecified = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -1908,9 +2013,19 @@ namespace Org.Visiontech.Product
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class repairDTO : productDTO
+    {
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(antireflectionDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mirroringDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(colorationDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(scratchproofDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -1929,6 +2044,32 @@ namespace Org.Visiontech.Product
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
     public partial class antireflectionDTO : treatmentDTO
     {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class mirroringDTO : treatmentDTO
+    {
+        
+        private string categoryField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string category
+        {
+            get
+            {
+                return this.categoryField;
+            }
+            set
+            {
+                this.categoryField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -1995,32 +2136,6 @@ namespace Org.Visiontech.Product
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class mirroringDTO : treatmentDTO
-    {
-        
-        private string categoryField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string category
-        {
-            get
-            {
-                return this.categoryField;
-            }
-            set
-            {
-                this.categoryField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
     public partial class scratchproofDTO : treatmentDTO
     {
     }
@@ -2034,13 +2149,13 @@ namespace Org.Visiontech.Product
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Product.productDTO[] arg0;
+        public Org.Visiontech.Stock.stockDTO[] arg0;
         
         public delete()
         {
         }
         
-        public delete(Org.Visiontech.Product.productDTO[] arg0)
+        public delete(Org.Visiontech.Stock.stockDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -2067,13 +2182,13 @@ namespace Org.Visiontech.Product
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Product.productDTO[] arg0;
+        public Org.Visiontech.Stock.stockDTO[] arg0;
         
         public edit()
         {
         }
         
-        public edit(Org.Visiontech.Product.productDTO[] arg0)
+        public edit(Org.Visiontech.Stock.stockDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -2088,13 +2203,13 @@ namespace Org.Visiontech.Product
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Product.productDTO[] @return;
+        public Org.Visiontech.Stock.stockDTO[] @return;
         
         public editResponse()
         {
         }
         
-        public editResponse(Org.Visiontech.Product.productDTO[] @return)
+        public editResponse(Org.Visiontech.Stock.stockDTO[] @return)
         {
             this.@return = @return;
         }
@@ -2109,7 +2224,7 @@ namespace Org.Visiontech.Product
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Product.findCriteriaDTO[] arg0;
+        public Org.Visiontech.Stock.findCriteriaDTO[] arg0;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -2123,7 +2238,7 @@ namespace Org.Visiontech.Product
         {
         }
         
-        public find(Org.Visiontech.Product.findCriteriaDTO[] arg0, int arg1, int arg2)
+        public find(Org.Visiontech.Stock.findCriteriaDTO[] arg0, int arg1, int arg2)
         {
             this.arg0 = arg0;
             this.arg1 = arg1;
@@ -2140,13 +2255,13 @@ namespace Org.Visiontech.Product
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Product.findResultDTO @return;
+        public Org.Visiontech.Stock.findResultDTO @return;
         
         public findResponse()
         {
         }
         
-        public findResponse(Org.Visiontech.Product.findResultDTO @return)
+        public findResponse(Org.Visiontech.Stock.findResultDTO @return)
         {
             this.@return = @return;
         }
@@ -2161,13 +2276,13 @@ namespace Org.Visiontech.Product
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Product.productDTO[] arg0;
+        public Org.Visiontech.Stock.stockDTO[] arg0;
         
         public create()
         {
         }
         
-        public create(Org.Visiontech.Product.productDTO[] arg0)
+        public create(Org.Visiontech.Stock.stockDTO[] arg0)
         {
             this.arg0 = arg0;
         }
@@ -2182,106 +2297,106 @@ namespace Org.Visiontech.Product
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.service.optoplus.visiontech.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public Org.Visiontech.Product.productDTO[] @return;
+        public Org.Visiontech.Stock.stockDTO[] @return;
         
         public createResponse()
         {
         }
         
-        public createResponse(Org.Visiontech.Product.productDTO[] @return)
+        public createResponse(Org.Visiontech.Stock.stockDTO[] @return)
         {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ProductSoapChannel : Org.Visiontech.Product.ProductSoap, System.ServiceModel.IClientChannel
+    public interface StockSoapChannel : Org.Visiontech.Stock.StockSoap, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ProductSoapClient : System.ServiceModel.ClientBase<Org.Visiontech.Product.ProductSoap>, Org.Visiontech.Product.ProductSoap
+    public partial class StockSoapClient : System.ServiceModel.ClientBase<Org.Visiontech.Stock.StockSoap>, Org.Visiontech.Stock.StockSoap
     {
         
-        public ProductSoapClient()
+        public StockSoapClient()
         {
         }
         
-        public ProductSoapClient(string endpointConfigurationName) : 
+        public StockSoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName)
         {
         }
         
-        public ProductSoapClient(string endpointConfigurationName, string remoteAddress) : 
+        public StockSoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress)
         {
         }
         
-        public ProductSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public StockSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress)
         {
         }
         
-        public ProductSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public StockSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Product.deleteResponse Org.Visiontech.Product.ProductSoap.delete(Org.Visiontech.Product.delete request)
+        Org.Visiontech.Stock.deleteResponse Org.Visiontech.Stock.StockSoap.delete(Org.Visiontech.Stock.delete request)
         {
             return base.Channel.delete(request);
         }
         
-        public void delete(Org.Visiontech.Product.productDTO[] arg0)
+        public void delete(Org.Visiontech.Stock.stockDTO[] arg0)
         {
-            Org.Visiontech.Product.delete inValue = new Org.Visiontech.Product.delete();
+            Org.Visiontech.Stock.delete inValue = new Org.Visiontech.Stock.delete();
             inValue.arg0 = arg0;
-            Org.Visiontech.Product.deleteResponse retVal = ((Org.Visiontech.Product.ProductSoap)(this)).delete(inValue);
+            Org.Visiontech.Stock.deleteResponse retVal = ((Org.Visiontech.Stock.StockSoap)(this)).delete(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Product.editResponse Org.Visiontech.Product.ProductSoap.edit(Org.Visiontech.Product.edit request)
+        Org.Visiontech.Stock.editResponse Org.Visiontech.Stock.StockSoap.edit(Org.Visiontech.Stock.edit request)
         {
             return base.Channel.edit(request);
         }
         
-        public Org.Visiontech.Product.productDTO[] edit(Org.Visiontech.Product.productDTO[] arg0)
+        public Org.Visiontech.Stock.stockDTO[] edit(Org.Visiontech.Stock.stockDTO[] arg0)
         {
-            Org.Visiontech.Product.edit inValue = new Org.Visiontech.Product.edit();
+            Org.Visiontech.Stock.edit inValue = new Org.Visiontech.Stock.edit();
             inValue.arg0 = arg0;
-            Org.Visiontech.Product.editResponse retVal = ((Org.Visiontech.Product.ProductSoap)(this)).edit(inValue);
+            Org.Visiontech.Stock.editResponse retVal = ((Org.Visiontech.Stock.StockSoap)(this)).edit(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Product.findResponse Org.Visiontech.Product.ProductSoap.find(Org.Visiontech.Product.find request)
+        Org.Visiontech.Stock.findResponse Org.Visiontech.Stock.StockSoap.find(Org.Visiontech.Stock.find request)
         {
             return base.Channel.find(request);
         }
         
-        public Org.Visiontech.Product.findResultDTO find(Org.Visiontech.Product.findCriteriaDTO[] arg0, int arg1, int arg2)
+        public Org.Visiontech.Stock.findResultDTO find(Org.Visiontech.Stock.findCriteriaDTO[] arg0, int arg1, int arg2)
         {
-            Org.Visiontech.Product.find inValue = new Org.Visiontech.Product.find();
+            Org.Visiontech.Stock.find inValue = new Org.Visiontech.Stock.find();
             inValue.arg0 = arg0;
             inValue.arg1 = arg1;
             inValue.arg2 = arg2;
-            Org.Visiontech.Product.findResponse retVal = ((Org.Visiontech.Product.ProductSoap)(this)).find(inValue);
+            Org.Visiontech.Stock.findResponse retVal = ((Org.Visiontech.Stock.StockSoap)(this)).find(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Org.Visiontech.Product.createResponse Org.Visiontech.Product.ProductSoap.create(Org.Visiontech.Product.create request)
+        Org.Visiontech.Stock.createResponse Org.Visiontech.Stock.StockSoap.create(Org.Visiontech.Stock.create request)
         {
             return base.Channel.create(request);
         }
         
-        public Org.Visiontech.Product.productDTO[] create(Org.Visiontech.Product.productDTO[] arg0)
+        public Org.Visiontech.Stock.stockDTO[] create(Org.Visiontech.Stock.stockDTO[] arg0)
         {
-            Org.Visiontech.Product.create inValue = new Org.Visiontech.Product.create();
+            Org.Visiontech.Stock.create inValue = new Org.Visiontech.Stock.create();
             inValue.arg0 = arg0;
-            Org.Visiontech.Product.createResponse retVal = ((Org.Visiontech.Product.ProductSoap)(this)).create(inValue);
+            Org.Visiontech.Stock.createResponse retVal = ((Org.Visiontech.Stock.StockSoap)(this)).create(inValue);
             return retVal.@return;
         }
     }
