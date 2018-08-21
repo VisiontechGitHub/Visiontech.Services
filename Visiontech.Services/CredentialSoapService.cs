@@ -123,6 +123,11 @@ namespace Org.Visiontech.Credential
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(roleDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(groupDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGroupingDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
@@ -170,6 +175,11 @@ namespace Org.Visiontech.Credential
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(roleDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(groupDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGroupingDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
@@ -218,6 +228,11 @@ namespace Org.Visiontech.Credential
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(roleDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(groupDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGroupingDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
@@ -267,6 +282,11 @@ namespace Org.Visiontech.Credential
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(roleDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(groupDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGroupingDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
@@ -317,6 +337,11 @@ namespace Org.Visiontech.Credential
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(roleDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(groupDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGroupingDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
@@ -379,18 +404,6 @@ namespace Org.Visiontech.Credential
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(identifiable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(created))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(validable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(role))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(group))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(person))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credential))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGrouping))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(findResultDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(findCriteriaDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(relationalCriteriaDTO))]
@@ -401,6 +414,11 @@ namespace Org.Visiontech.Credential
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletableDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(validableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(roleDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(groupDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGroupingDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(legalPersonDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(naturalPersonDTO))]
@@ -412,496 +430,6 @@ namespace Org.Visiontech.Credential
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
     public abstract partial class jsonbPolimorphic
     {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(created))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(validable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(role))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(group))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(person))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credential))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGrouping))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public abstract partial class identifiable : jsonbPolimorphic
-    {
-        
-        private string idField;
-        
-        private long versionField;
-        
-        private bool versionFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string id
-        {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public long version
-        {
-            get
-            {
-                return this.versionField;
-            }
-            set
-            {
-                this.versionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool versionSpecified
-        {
-            get
-            {
-                return this.versionFieldSpecified;
-            }
-            set
-            {
-                this.versionFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(modifiable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(validable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(role))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(group))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(person))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credential))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGrouping))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public abstract partial class created : identifiable
-    {
-        
-        private System.DateTime creationField;
-        
-        private bool creationFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime creation
-        {
-            get
-            {
-                return this.creationField;
-            }
-            set
-            {
-                this.creationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool creationSpecified
-        {
-            get
-            {
-                return this.creationFieldSpecified;
-            }
-            set
-            {
-                this.creationFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(deletable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(validable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(role))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(group))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(person))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credential))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGrouping))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public abstract partial class modifiable : created
-    {
-        
-        private System.DateTime modifiedField;
-        
-        private bool modifiedFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime modified
-        {
-            get
-            {
-                return this.modifiedField;
-            }
-            set
-            {
-                this.modifiedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool modifiedSpecified
-        {
-            get
-            {
-                return this.modifiedFieldSpecified;
-            }
-            set
-            {
-                this.modifiedFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(validable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(role))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(group))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(person))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credential))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGrouping))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public abstract partial class deletable : modifiable
-    {
-        
-        private bool deletedField;
-        
-        private bool deletedFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool deleted
-        {
-            get
-            {
-                return this.deletedField;
-            }
-            set
-            {
-                this.deletedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool deletedSpecified
-        {
-            get
-            {
-                return this.deletedFieldSpecified;
-            }
-            set
-            {
-                this.deletedFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(codifiable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(role))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(group))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(person))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credential))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(credentialGrouping))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public abstract partial class validable : deletable
-    {
-        
-        private bool validField;
-        
-        private bool validFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool valid
-        {
-            get
-            {
-                return this.validField;
-            }
-            set
-            {
-                this.validField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool validSpecified
-        {
-            get
-            {
-                return this.validFieldSpecified;
-            }
-            set
-            {
-                this.validFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptable))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(role))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(group))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public abstract partial class codifiable : validable
-    {
-        
-        private string codeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string code
-        {
-            get
-            {
-                return this.codeField;
-            }
-            set
-            {
-                this.codeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(role))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(group))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public abstract partial class descriptable : codifiable
-    {
-        
-        private string descriptionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string description
-        {
-            get
-            {
-                return this.descriptionField;
-            }
-            set
-            {
-                this.descriptionField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class role : descriptable
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class group : descriptable
-    {
-        
-        private group parentField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public group parent
-        {
-            get
-            {
-                return this.parentField;
-            }
-            set
-            {
-                this.parentField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class person : validable
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class credential : validable
-    {
-        
-        private string passwordField;
-        
-        private person personField;
-        
-        private string usernameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string password
-        {
-            get
-            {
-                return this.passwordField;
-            }
-            set
-            {
-                this.passwordField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public person person
-        {
-            get
-            {
-                return this.personField;
-            }
-            set
-            {
-                this.personField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string username
-        {
-            get
-            {
-                return this.usernameField;
-            }
-            set
-            {
-                this.usernameField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class credentialGrouping : validable
-    {
-        
-        private credential credentialField;
-        
-        private group groupField;
-        
-        private role roleField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public credential credential
-        {
-            get
-            {
-                return this.credentialField;
-            }
-            set
-            {
-                this.credentialField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public group group
-        {
-            get
-            {
-                return this.groupField;
-            }
-            set
-            {
-                this.groupField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public role role
-        {
-            get
-            {
-                return this.roleField;
-            }
-            set
-            {
-                this.roleField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -1124,6 +652,157 @@ namespace Org.Visiontech.Credential
             set
             {
                 this.criteriaField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(descriptableDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(roleDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(groupDTO))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public abstract partial class codifiableDTO : validableDTO
+    {
+        
+        private string codeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string code
+        {
+            get
+            {
+                return this.codeField;
+            }
+            set
+            {
+                this.codeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(roleDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(groupDTO))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public abstract partial class descriptableDTO : codifiableDTO
+    {
+        
+        private string descriptionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string description
+        {
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class roleDTO : descriptableDTO
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class groupDTO : descriptableDTO
+    {
+        
+        private groupDTO parentField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public groupDTO parent
+        {
+            get
+            {
+                return this.parentField;
+            }
+            set
+            {
+                this.parentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class credentialGroupingDTO : validableDTO
+    {
+        
+        private credentialDTO credentialField;
+        
+        private groupDTO groupField;
+        
+        private roleDTO roleField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public credentialDTO credential
+        {
+            get
+            {
+                return this.credentialField;
+            }
+            set
+            {
+                this.credentialField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public groupDTO group
+        {
+            get
+            {
+                return this.groupField;
+            }
+            set
+            {
+                this.groupField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public roleDTO role
+        {
+            get
+            {
+                return this.roleField;
+            }
+            set
+            {
+                this.roleField = value;
             }
         }
     }
