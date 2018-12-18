@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Net;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
@@ -14,7 +15,7 @@ namespace Visiontech.Services.Utils
             get; set;
         }
 
-        public CookieCollection Cookies
+        public ICollection<string> Cookies
         {
             get; set;
         }
@@ -30,11 +31,11 @@ namespace Visiontech.Services.Utils
                 {
                     if (Cookies is null)
                     {
-                        Cookies = new CookieCollection();
+                        Cookies = new Collection<string>();
                     }
-                    foreach (string str in webHeaderCollection[HttpResponseHeader.SetCookie].ToString().Split(";".ToCharArray()))
+                    foreach (string cookie in webHeaderCollection[HttpResponseHeader.SetCookie].Split(','))
                     {
-                        Cookies.Add(new Cookie(str.Split("=".ToCharArray())[0].Trim(), str.Split("=".ToCharArray())[1].Trim()));
+                        Cookies.Add(cookie);
                     }
                 }
 
@@ -57,12 +58,10 @@ namespace Visiontech.Services.Utils
 
             if (Cookies != null)
             {
-                IList<string> cookies = new List<string>();
-                foreach (Cookie cookie in Cookies)
+                foreach (string cookie in Cookies)
                 {
-                    cookies.Add(string.Join("=", new[] { cookie.Name, cookie.Value }));
+                    (request.Properties[HttpRequestMessageProperty.Name] as HttpRequestMessageProperty).Headers.Add(HttpRequestHeader.Cookie, cookie);
                 }
-                (request.Properties[HttpRequestMessageProperty.Name] as HttpRequestMessageProperty).Headers.Add(HttpRequestHeader.Cookie, string.Join("; ", cookies));
             }
 
             return null;

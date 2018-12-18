@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.Collections.Generic;
+using System.Net;
 using System.ServiceModel.Dispatcher;
 
 namespace Visiontech.Services.Utils
@@ -11,7 +12,7 @@ namespace Visiontech.Services.Utils
             get; set;
         }
 
-        CookieCollection Cookies
+        ICollection<string> Cookies
         {
             get; set;
         }
