@@ -11,13 +11,14 @@ namespace Visiontech.Services.Utils
     public class ClientBaseUtils
     {
 
-        public static S InitClientBase<I, S>(IServiceProvider serviceProvider, EndpointAddress endpoint) where S : ClientBase<I> where I : class
+        public static S InitClientBase<I, S>(IServiceProvider serviceProvider, EndpointAddress endpoint, BasicHttpSecurityMode mode, HttpClientCredentialType type) where S : ClientBase<I> where I : class
         {
             var binding = new BasicHttpBinding
             {
                 MaxReceivedMessageSize = 2147483647
             };
-            binding.Security.Mode = BasicHttpSecurityMode.Transport;
+            binding.Security.Mode = mode;
+            binding.Security.Transport.ClientCredentialType = type;
 
             S soapClient = Activator.CreateInstance(typeof(S), binding, endpoint) as S;
 

@@ -3,7 +3,6 @@ using System.Collections.ObjectModel;
 using System.Net;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
-using System.ServiceModel.Dispatcher;
 
 namespace Visiontech.Services.Utils
 {
@@ -58,10 +57,7 @@ namespace Visiontech.Services.Utils
 
             if (Cookies != null)
             {
-                foreach (string cookie in Cookies)
-                {
-                    (request.Properties[HttpRequestMessageProperty.Name] as HttpRequestMessageProperty).Headers.Add(HttpRequestHeader.Cookie, cookie);
-                }
+                (request.Properties[HttpRequestMessageProperty.Name] as HttpRequestMessageProperty).Headers[HttpRequestHeader.Cookie] = string.Join(";", Cookies);
             }
 
             return null;
