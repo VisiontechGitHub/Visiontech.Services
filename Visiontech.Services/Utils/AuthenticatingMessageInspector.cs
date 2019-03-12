@@ -19,6 +19,11 @@ namespace Visiontech.Services.Utils
             get; set;
         }
 
+        public IDictionary<HttpRequestHeader, string> Headers
+        {
+            get; set;
+        }
+
         public void AfterReceiveReply(ref Message reply, object correlationState)
         {
             if (reply.Properties.ContainsKey(HttpResponseMessageProperty.Name))
@@ -58,6 +63,14 @@ namespace Visiontech.Services.Utils
             if (Cookies != null)
             {
                 (request.Properties[HttpRequestMessageProperty.Name] as HttpRequestMessageProperty).Headers[HttpRequestHeader.Cookie] = string.Join(";", Cookies);
+            }
+
+            if (Headers != null)
+            {
+                foreach (HttpRequestHeader header in Headers.Keys)
+                {
+                    (request.Properties[HttpRequestMessageProperty.Name] as HttpRequestMessageProperty).Headers[header] = Headers[header];
+                }
             }
 
             return null;
