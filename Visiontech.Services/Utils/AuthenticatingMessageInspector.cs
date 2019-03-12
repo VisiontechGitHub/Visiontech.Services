@@ -19,7 +19,7 @@ namespace Visiontech.Services.Utils
             get; set;
         }
 
-        public IDictionary<HttpRequestHeader, string> Headers
+        public IDictionary<string, string> Headers
         {
             get; set;
         }
@@ -67,9 +67,9 @@ namespace Visiontech.Services.Utils
 
             if (Headers != null)
             {
-                foreach (HttpRequestHeader header in Headers.Keys)
+                foreach (string header in Headers.Keys)
                 {
-                    (request.Properties[HttpRequestMessageProperty.Name] as HttpRequestMessageProperty).Headers[header] = Headers[header];
+                    (request.Properties[HttpRequestMessageProperty.Name] as HttpRequestMessageProperty).Headers.Add(header, Headers[header]);
                 }
             }
 

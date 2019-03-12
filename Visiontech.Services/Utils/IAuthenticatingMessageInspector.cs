@@ -17,7 +17,7 @@ namespace Visiontech.Services.Utils
             get; set;
         }
 
-        IDictionary<HttpRequestHeader, string> Headers
+        IDictionary<string, string> Headers
         {
             get; set;
         }
