@@ -11,7 +11,7 @@ namespace Visiontech.Services.Utils
     public class ClientBaseUtils
     {
 
-        public static S InitClientBase<I, S>(EndpointAddress endpoint, BasicHttpSecurityMode mode, HttpClientCredentialType type, Collection<IClientMessageInspector> inspectors) where S : ClientBase<I> where I : class
+        public static S InitClientBase<I, S>(EndpointAddress endpoint, BasicHttpSecurityMode mode, HttpClientCredentialType type, ICollection<IClientMessageInspector> inspectors = default(Collection<IClientMessageInspector>)) where S : ClientBase<I> where I : class
         {
             var binding = new BasicHttpBinding
             {
@@ -24,7 +24,7 @@ namespace Visiontech.Services.Utils
 
             IEndpointBehavior endpointBehavior = new MessageInspectorsEndpointBehavior()
             {
-                MessageInspectors = inspectors
+                MessageInspectors = inspectors is object ? inspectors: new Collection<IClientMessageInspector>()
             };
 
             (soapClient.Endpoint.GetType().GetTypeInfo().GetDeclaredProperty("Behaviors").GetValue(soapClient.Endpoint) as KeyedByTypeCollection<IEndpointBehavior>).Add(endpointBehavior);
