@@ -1,6 +1,8 @@
-﻿using System;
+﻿using SoapClientService;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Net;
 using System.Reflection;
 using System.ServiceModel;
 using System.ServiceModel.Description;
@@ -11,9 +13,9 @@ namespace Visiontech.Services.Utils
     public class ClientBaseUtils
     {
 
-        public static S InitClientBase<I, S>(EndpointAddress endpoint, BasicHttpSecurityMode mode, HttpClientCredentialType type, ICollection<IClientMessageInspector> inspectors = default(Collection<IClientMessageInspector>)) where S : ClientBase<I> where I : class
+        public static I InitClientBase<I, S>(EndpointAddress endpoint, BasicHttpSecurityMode mode, HttpClientCredentialType type, ICollection<IClientMessageInspector> inspectors = default(Collection<IClientMessageInspector>), ICollection<Action<HttpWebResponse>> handlers = default(Collection<Action<HttpWebResponse>>)) where S : ClientBase<I>, I where I : class
         {
-            var binding = new BasicHttpBinding
+            BasicHttpBinding binding = new BasicHttpBinding
             {
                 MaxReceivedMessageSize = 2147483647
             };
@@ -29,7 +31,7 @@ namespace Visiontech.Services.Utils
 
             (soapClient.Endpoint.GetType().GetTypeInfo().GetDeclaredProperty("Behaviors").GetValue(soapClient.Endpoint) as KeyedByTypeCollection<IEndpointBehavior>).Add(endpointBehavior);
 
-            return soapClient;
+            return HttpWebResponseInterceptorProxy<I>.Create(soapClient, handlers is object ? handlers : new Collection<Action<HttpWebResponse>>());
         }
 
     }

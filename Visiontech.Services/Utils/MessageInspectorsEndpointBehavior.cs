@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Diagnostics;
 using System.Reflection;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
@@ -7,7 +6,9 @@ using System.ServiceModel.Dispatcher;
 
 namespace Visiontech.Services.Utils
 {
+
     public class MessageInspectorsEndpointBehavior : IEndpointBehavior
+
     {
 
         public ICollection<IClientMessageInspector> MessageInspectors { get; set; }
@@ -18,7 +19,7 @@ namespace Visiontech.Services.Utils
 
         public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime)
         {
-            if (!(MessageInspectors is null))
+            if (MessageInspectors is object)
             {
                 PropertyInfo propertyInfo = clientRuntime.GetType().GetTypeInfo().GetDeclaredProperty("MessageInspectors");
 
