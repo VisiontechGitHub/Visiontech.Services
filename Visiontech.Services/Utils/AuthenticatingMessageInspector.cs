@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Net;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
+using System.Text.RegularExpressions;
 
 namespace Visiontech.Services.Utils
 {
@@ -17,7 +19,12 @@ namespace Visiontech.Services.Utils
         public ICollection<string> Cookies
         {
             get; set;
-        }
+        } = new Collection<string>();
+
+        public ICollection<string> CookieFilters
+        {
+            get; set;
+        } = new List<string>();
 
         public IDictionary<string, string> Headers
         {
@@ -26,18 +33,14 @@ namespace Visiontech.Services.Utils
 
         public void AfterReceiveReply(ref Message reply, object correlationState)
         {
-            if (reply.Properties.ContainsKey(HttpResponseMessageProperty.Name))
+            if (reply.Properties.ContainsKey(HttpResponseMessageProperty.Name) && reply.Properties[HttpResponseMessageProperty.Name] is HttpResponseMessageProperty httpResponseMessageProperty)
             {
 
-                WebHeaderCollection webHeaderCollection = (reply.Properties[HttpResponseMessageProperty.Name] as HttpResponseMessageProperty).Headers;
+                WebHeaderCollection webHeaderCollection = httpResponseMessageProperty.Headers;
 
-                if (!(webHeaderCollection[HttpResponseHeader.SetCookie] is null))
+                if (webHeaderCollection[HttpResponseHeader.SetCookie] is object && Cookies is object)
                 {
-                    if (Cookies is null)
-                    {
-                        Cookies = new Collection<string>();
-                    }
-                    foreach (string cookie in webHeaderCollection[HttpResponseHeader.SetCookie].Split(','))
+                    foreach (string cookie in webHeaderCollection[HttpResponseHeader.SetCookie].Split(',').Where(cookie => CookieFilters is null || !CookieFilters.Any(filter => Regex.IsMatch(cookie, filter))))
                     {
                         Cookies.Add(cookie);
                     }
@@ -55,21 +58,22 @@ namespace Visiontech.Services.Utils
                 request.Properties.Add(HttpRequestMessageProperty.Name, new HttpRequestMessageProperty());
             }
 
-            if (!string.IsNullOrWhiteSpace(Bearer))
+            if (request.Properties[HttpRequestMessageProperty.Name] is HttpRequestMessageProperty httpRequestMessageProperty)
             {
-                (request.Properties[HttpRequestMessageProperty.Name] as HttpRequestMessageProperty).Headers.Add(HttpRequestHeader.Authorization, "Bearer " + Bearer);
-            }
-
-            if (Cookies != null)
-            {
-                (request.Properties[HttpRequestMessageProperty.Name] as HttpRequestMessageProperty).Headers[HttpRequestHeader.Cookie] = string.Join(";", Cookies);
-            }
-
-            if (Headers != null)
-            {
-                foreach (string header in Headers.Keys)
+                if (!string.IsNullOrWhiteSpace(Bearer))
                 {
-                    (request.Properties[HttpRequestMessageProperty.Name] as HttpRequestMessageProperty).Headers.Add(header, Headers[header]);
+                    httpRequestMessageProperty.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + Bearer);
+                }
+                if (Cookies != null)
+                {
+                    httpRequestMessageProperty.Headers[HttpRequestHeader.Cookie] = string.Join(";", Cookies.Where(cookie => CookieFilters is null || !CookieFilters.Any(filter => Regex.IsMatch(cookie, filter))));
+                }
+                if (Headers != null)
+                {
+                    foreach (string header in Headers.Keys)
+                    {
+                        httpRequestMessageProperty.Headers.Add(header, Headers[header]);
+                    }
                 }
             }
 
