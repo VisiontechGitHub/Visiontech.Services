@@ -3,7 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.57</Version>
+    <Version>1.0.80</Version>
+    <AssemblyVersion>1.0.80.0</AssemblyVersion>
+    <FileVersion>1.0.80.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
