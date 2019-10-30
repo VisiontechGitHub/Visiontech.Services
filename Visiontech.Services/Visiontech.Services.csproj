@@ -3,14 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.80</Version>
-    <AssemblyVersion>1.0.80.0</AssemblyVersion>
-    <FileVersion>1.0.80.0</FileVersion>
+    <Version>1.0.84</Version>
+    <AssemblyVersion>1.0.84.0</AssemblyVersion>
+    <FileVersion>1.0.84.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.ServiceModel.Http" Version="4.4.4" />
-    <PackageReference Include="Visiontech.Commons" Version="1.0.31" />
+    <PackageReference Include="Visiontech.Commons" Version="1.0.37" />
   </ItemGroup>
 
 </Project>

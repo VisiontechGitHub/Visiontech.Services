@@ -14,14 +14,14 @@ namespace Visiontech.Services.Utils
     public class ClientBaseUtils
     {
 
-        public static I InitClientBase<I, S>(EndpointAddress endpoint, BasicHttpSecurityMode mode, HttpClientCredentialType type, ICollection<IClientMessageInspector> inspectors = default(Collection<IClientMessageInspector>), ICollection<Action<HttpWebResponse>> handlers = default(Collection<Action<HttpWebResponse>>), CookieContainer cookieContainer = default) where S : ClientBase<I>, I where I : class
+        public static I InitClientBase<I, S>(EndpointAddress endpoint, ICollection<IClientMessageInspector> inspectors = default(Collection<IClientMessageInspector>), ICollection<Action<HttpWebResponse>> handlers = default, ICollection<Action<FaultException>> faultHandlers = default, ICollection<Action<Exception>> genericHandlers = default, CookieContainer cookieContainer = default) where S : ClientBase<I>, I where I : class
         {
             BasicHttpBinding binding = new BasicHttpBinding
             {
                 MaxReceivedMessageSize = 2147483647
             };
-            binding.Security.Mode = mode;
-            binding.Security.Transport.ClientCredentialType = type;
+            binding.Security.Mode = string.Equals(endpoint.Uri.Scheme, "https") ? BasicHttpSecurityMode.Transport : BasicHttpSecurityMode.None;
+            binding.Security.Transport.ClientCredentialType = string.Equals(endpoint.Uri.Scheme, "https") ? HttpClientCredentialType.None : HttpClientCredentialType.Basic;
             binding.AllowCookies = cookieContainer is object;
 
             S soapClient = Activator.CreateInstance(typeof(S), binding, endpoint) as S;
@@ -38,7 +38,7 @@ namespace Visiontech.Services.Utils
                 httpCookieContainerManager.CookieContainer = cookieContainer;
             }
 
-            return HttpWebResponseInterceptorProxy<I>.Create(soapClient, handlers is object ? handlers : new Collection<Action<HttpWebResponse>>());
+            return HttpWebResponseInterceptorProxy<I>.Create(soapClient, handlers is object ? handlers : new Collection<Action<HttpWebResponse>>(), faultHandlers is object ? faultHandlers : new Collection<Action<FaultException>>(), genericHandlers is object ? genericHandlers : new Collection<Action<Exception>>());
         }
 
     }
