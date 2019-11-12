@@ -20,9 +20,9 @@ namespace Org.Visiontech.Compute
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(computeLensResponseOmaSideDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(twoDimensionalPointDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(computeLensRequestOmaSideDTO))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(twoDimensionalPointDTO))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(computeLensResponseOmaSideDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(messageDTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Org.Visiontech.Compute.analyzeLensResponse analyzeLens(Org.Visiontech.Compute.analyzeLens request);
@@ -30,9 +30,9 @@ namespace Org.Visiontech.Compute
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(computeLensResponseOmaSideDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(twoDimensionalPointDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(computeLensRequestOmaSideDTO))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(twoDimensionalPointDTO))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(computeLensResponseOmaSideDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(messageDTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Org.Visiontech.Compute.computeLensResponse computeLens(Org.Visiontech.Compute.computeLens request);
@@ -40,9 +40,9 @@ namespace Org.Visiontech.Compute
         // CODEGEN: Il parametro 'return' richiede informazioni sullo schema aggiuntive che non possono essere acquisite utilizzando la modalità parametro. L'attributo specifico è 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(computeLensResponseOmaSideDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(twoDimensionalPointDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(computeLensRequestOmaSideDTO))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(twoDimensionalPointDTO))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(computeLensResponseOmaSideDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(messageDTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Org.Visiontech.Compute.previewLensResponse previewLens(Org.Visiontech.Compute.previewLens request);
@@ -189,779 +189,6 @@ namespace Org.Visiontech.Compute
             set
             {
                 this.yFieldSpecified = value;
-            }
-        }
-    }
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensResponseSideDTO))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeLensResponseOmaSideDTO
-    {
-
-        private int cribPerimeterThickestPointAngleField;
-
-        private bool cribPerimeterThickestPointAngleFieldSpecified;
-
-        private double cribPerimeterThickestPointThicknessField;
-
-        private bool cribPerimeterThickestPointThicknessFieldSpecified;
-
-        private int cribPerimeterThinnestPointAngleField;
-
-        private bool cribPerimeterThinnestPointAngleFieldSpecified;
-
-        private double cribPerimeterThinnestPointThicknessField;
-
-        private bool cribPerimeterThinnestPointThicknessFieldSpecified;
-
-        private double designedAdditionPowerField;
-
-        private bool designedAdditionPowerFieldSpecified;
-
-        private int designedDistanceReferencePointCylinderAxisField;
-
-        private bool designedDistanceReferencePointCylinderAxisFieldSpecified;
-
-        private double designedDistanceReferencePointCylinderPowerField;
-
-        private bool designedDistanceReferencePointCylinderPowerFieldSpecified;
-
-        private double designedDistanceReferencePointSpherePowerField;
-
-        private bool designedDistanceReferencePointSpherePowerFieldSpecified;
-
-        private int designedLayoutReferencePointCylinderAxisField;
-
-        private bool designedLayoutReferencePointCylinderAxisFieldSpecified;
-
-        private double designedLayoutReferencePointCylinderPowerField;
-
-        private bool designedLayoutReferencePointCylinderPowerFieldSpecified;
-
-        private double designedLayoutReferencePointSpherePowerField;
-
-        private bool designedLayoutReferencePointSpherePowerFieldSpecified;
-
-        private int designedNearReferencePointCylinderAxisField;
-
-        private bool designedNearReferencePointCylinderAxisFieldSpecified;
-
-        private double designedNearReferencePointCylinderPowerField;
-
-        private bool designedNearReferencePointCylinderPowerFieldSpecified;
-
-        private double designedNearReferencePointSpherePowerField;
-
-        private bool designedNearReferencePointSpherePowerFieldSpecified;
-
-        private int designedPrismBaseSettingField;
-
-        private bool designedPrismBaseSettingFieldSpecified;
-
-        private double designedPrismMagnitudeField;
-
-        private bool designedPrismMagnitudeFieldSpecified;
-
-        private double finishedCenterThicknessField;
-
-        private bool finishedCenterThicknessFieldSpecified;
-
-        private double lapBaseCurveField;
-
-        private bool lapBaseCurveFieldSpecified;
-
-        private double lapCrossCurveField;
-
-        private bool lapCrossCurveFieldSpecified;
-
-        private double surfaceBlockCenterGeneratorThicknessField;
-
-        private bool surfaceBlockCenterGeneratorThicknessFieldSpecified;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
-        public int cribPerimeterThickestPointAngle
-        {
-            get
-            {
-                return this.cribPerimeterThickestPointAngleField;
-            }
-            set
-            {
-                this.cribPerimeterThickestPointAngleField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool cribPerimeterThickestPointAngleSpecified
-        {
-            get
-            {
-                return this.cribPerimeterThickestPointAngleFieldSpecified;
-            }
-            set
-            {
-                this.cribPerimeterThickestPointAngleFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
-        public double cribPerimeterThickestPointThickness
-        {
-            get
-            {
-                return this.cribPerimeterThickestPointThicknessField;
-            }
-            set
-            {
-                this.cribPerimeterThickestPointThicknessField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool cribPerimeterThickestPointThicknessSpecified
-        {
-            get
-            {
-                return this.cribPerimeterThickestPointThicknessFieldSpecified;
-            }
-            set
-            {
-                this.cribPerimeterThickestPointThicknessFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
-        public int cribPerimeterThinnestPointAngle
-        {
-            get
-            {
-                return this.cribPerimeterThinnestPointAngleField;
-            }
-            set
-            {
-                this.cribPerimeterThinnestPointAngleField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool cribPerimeterThinnestPointAngleSpecified
-        {
-            get
-            {
-                return this.cribPerimeterThinnestPointAngleFieldSpecified;
-            }
-            set
-            {
-                this.cribPerimeterThinnestPointAngleFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
-        public double cribPerimeterThinnestPointThickness
-        {
-            get
-            {
-                return this.cribPerimeterThinnestPointThicknessField;
-            }
-            set
-            {
-                this.cribPerimeterThinnestPointThicknessField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool cribPerimeterThinnestPointThicknessSpecified
-        {
-            get
-            {
-                return this.cribPerimeterThinnestPointThicknessFieldSpecified;
-            }
-            set
-            {
-                this.cribPerimeterThinnestPointThicknessFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
-        public double designedAdditionPower
-        {
-            get
-            {
-                return this.designedAdditionPowerField;
-            }
-            set
-            {
-                this.designedAdditionPowerField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedAdditionPowerSpecified
-        {
-            get
-            {
-                return this.designedAdditionPowerFieldSpecified;
-            }
-            set
-            {
-                this.designedAdditionPowerFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
-        public int designedDistanceReferencePointCylinderAxis
-        {
-            get
-            {
-                return this.designedDistanceReferencePointCylinderAxisField;
-            }
-            set
-            {
-                this.designedDistanceReferencePointCylinderAxisField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedDistanceReferencePointCylinderAxisSpecified
-        {
-            get
-            {
-                return this.designedDistanceReferencePointCylinderAxisFieldSpecified;
-            }
-            set
-            {
-                this.designedDistanceReferencePointCylinderAxisFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
-        public double designedDistanceReferencePointCylinderPower
-        {
-            get
-            {
-                return this.designedDistanceReferencePointCylinderPowerField;
-            }
-            set
-            {
-                this.designedDistanceReferencePointCylinderPowerField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedDistanceReferencePointCylinderPowerSpecified
-        {
-            get
-            {
-                return this.designedDistanceReferencePointCylinderPowerFieldSpecified;
-            }
-            set
-            {
-                this.designedDistanceReferencePointCylinderPowerFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
-        public double designedDistanceReferencePointSpherePower
-        {
-            get
-            {
-                return this.designedDistanceReferencePointSpherePowerField;
-            }
-            set
-            {
-                this.designedDistanceReferencePointSpherePowerField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedDistanceReferencePointSpherePowerSpecified
-        {
-            get
-            {
-                return this.designedDistanceReferencePointSpherePowerFieldSpecified;
-            }
-            set
-            {
-                this.designedDistanceReferencePointSpherePowerFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
-        public int designedLayoutReferencePointCylinderAxis
-        {
-            get
-            {
-                return this.designedLayoutReferencePointCylinderAxisField;
-            }
-            set
-            {
-                this.designedLayoutReferencePointCylinderAxisField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedLayoutReferencePointCylinderAxisSpecified
-        {
-            get
-            {
-                return this.designedLayoutReferencePointCylinderAxisFieldSpecified;
-            }
-            set
-            {
-                this.designedLayoutReferencePointCylinderAxisFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
-        public double designedLayoutReferencePointCylinderPower
-        {
-            get
-            {
-                return this.designedLayoutReferencePointCylinderPowerField;
-            }
-            set
-            {
-                this.designedLayoutReferencePointCylinderPowerField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedLayoutReferencePointCylinderPowerSpecified
-        {
-            get
-            {
-                return this.designedLayoutReferencePointCylinderPowerFieldSpecified;
-            }
-            set
-            {
-                this.designedLayoutReferencePointCylinderPowerFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
-        public double designedLayoutReferencePointSpherePower
-        {
-            get
-            {
-                return this.designedLayoutReferencePointSpherePowerField;
-            }
-            set
-            {
-                this.designedLayoutReferencePointSpherePowerField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedLayoutReferencePointSpherePowerSpecified
-        {
-            get
-            {
-                return this.designedLayoutReferencePointSpherePowerFieldSpecified;
-            }
-            set
-            {
-                this.designedLayoutReferencePointSpherePowerFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 11)]
-        public int designedNearReferencePointCylinderAxis
-        {
-            get
-            {
-                return this.designedNearReferencePointCylinderAxisField;
-            }
-            set
-            {
-                this.designedNearReferencePointCylinderAxisField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedNearReferencePointCylinderAxisSpecified
-        {
-            get
-            {
-                return this.designedNearReferencePointCylinderAxisFieldSpecified;
-            }
-            set
-            {
-                this.designedNearReferencePointCylinderAxisFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 12)]
-        public double designedNearReferencePointCylinderPower
-        {
-            get
-            {
-                return this.designedNearReferencePointCylinderPowerField;
-            }
-            set
-            {
-                this.designedNearReferencePointCylinderPowerField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedNearReferencePointCylinderPowerSpecified
-        {
-            get
-            {
-                return this.designedNearReferencePointCylinderPowerFieldSpecified;
-            }
-            set
-            {
-                this.designedNearReferencePointCylinderPowerFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 13)]
-        public double designedNearReferencePointSpherePower
-        {
-            get
-            {
-                return this.designedNearReferencePointSpherePowerField;
-            }
-            set
-            {
-                this.designedNearReferencePointSpherePowerField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedNearReferencePointSpherePowerSpecified
-        {
-            get
-            {
-                return this.designedNearReferencePointSpherePowerFieldSpecified;
-            }
-            set
-            {
-                this.designedNearReferencePointSpherePowerFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 14)]
-        public int designedPrismBaseSetting
-        {
-            get
-            {
-                return this.designedPrismBaseSettingField;
-            }
-            set
-            {
-                this.designedPrismBaseSettingField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedPrismBaseSettingSpecified
-        {
-            get
-            {
-                return this.designedPrismBaseSettingFieldSpecified;
-            }
-            set
-            {
-                this.designedPrismBaseSettingFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 15)]
-        public double designedPrismMagnitude
-        {
-            get
-            {
-                return this.designedPrismMagnitudeField;
-            }
-            set
-            {
-                this.designedPrismMagnitudeField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool designedPrismMagnitudeSpecified
-        {
-            get
-            {
-                return this.designedPrismMagnitudeFieldSpecified;
-            }
-            set
-            {
-                this.designedPrismMagnitudeFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 16)]
-        public double finishedCenterThickness
-        {
-            get
-            {
-                return this.finishedCenterThicknessField;
-            }
-            set
-            {
-                this.finishedCenterThicknessField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool finishedCenterThicknessSpecified
-        {
-            get
-            {
-                return this.finishedCenterThicknessFieldSpecified;
-            }
-            set
-            {
-                this.finishedCenterThicknessFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 17)]
-        public double lapBaseCurve
-        {
-            get
-            {
-                return this.lapBaseCurveField;
-            }
-            set
-            {
-                this.lapBaseCurveField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool lapBaseCurveSpecified
-        {
-            get
-            {
-                return this.lapBaseCurveFieldSpecified;
-            }
-            set
-            {
-                this.lapBaseCurveFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 18)]
-        public double lapCrossCurve
-        {
-            get
-            {
-                return this.lapCrossCurveField;
-            }
-            set
-            {
-                this.lapCrossCurveField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool lapCrossCurveSpecified
-        {
-            get
-            {
-                return this.lapCrossCurveFieldSpecified;
-            }
-            set
-            {
-                this.lapCrossCurveFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 19)]
-        public double surfaceBlockCenterGeneratorThickness
-        {
-            get
-            {
-                return this.surfaceBlockCenterGeneratorThicknessField;
-            }
-            set
-            {
-                this.surfaceBlockCenterGeneratorThicknessField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool surfaceBlockCenterGeneratorThicknessSpecified
-        {
-            get
-            {
-                return this.surfaceBlockCenterGeneratorThicknessFieldSpecified;
-            }
-            set
-            {
-                this.surfaceBlockCenterGeneratorThicknessFieldSpecified = value;
-            }
-        }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeLensResponseSideDTO : computeLensResponseOmaSideDTO
-    {
-
-        private double crossPositionField;
-
-        private bool crossPositionFieldSpecified;
-
-        private double downsetField;
-
-        private bool downsetFieldSpecified;
-
-        private double insetField;
-
-        private bool insetFieldSpecified;
-
-        private threeDimensionalPointDTO[] pointsField;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
-        public double crossPosition
-        {
-            get
-            {
-                return this.crossPositionField;
-            }
-            set
-            {
-                this.crossPositionField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool crossPositionSpecified
-        {
-            get
-            {
-                return this.crossPositionFieldSpecified;
-            }
-            set
-            {
-                this.crossPositionFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
-        public double downset
-        {
-            get
-            {
-                return this.downsetField;
-            }
-            set
-            {
-                this.downsetField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool downsetSpecified
-        {
-            get
-            {
-                return this.downsetFieldSpecified;
-            }
-            set
-            {
-                this.downsetFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
-        public double inset
-        {
-            get
-            {
-                return this.insetField;
-            }
-            set
-            {
-                this.insetField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool insetSpecified
-        {
-            get
-            {
-                return this.insetFieldSpecified;
-            }
-            set
-            {
-                this.insetFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("points", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 3)]
-        public threeDimensionalPointDTO[] points
-        {
-            get
-            {
-                return this.pointsField;
-            }
-            set
-            {
-                this.pointsField = value;
             }
         }
     }
@@ -1773,84 +1000,652 @@ namespace Org.Visiontech.Compute
     }
 
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(responseDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeResponseDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensResponseDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(requestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNativeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNearLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAcquiredLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMonofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensResponseSideDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public abstract partial class messageDTO
-    {
-    }
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeResponseDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensResponseDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public abstract partial class responseDTO : messageDTO
-    {
-    }
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensResponseDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public abstract partial class computeResponseDTO : responseDTO
-    {
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeLensResponseDTO : computeResponseDTO
+    public partial class computeLensResponseOmaSideDTO
     {
 
-        private computeLensResponseSideDTO valueField;
+        private int cribPerimeterThickestPointAngleField;
+
+        private bool cribPerimeterThickestPointAngleFieldSpecified;
+
+        private double cribPerimeterThickestPointThicknessField;
+
+        private bool cribPerimeterThickestPointThicknessFieldSpecified;
+
+        private int cribPerimeterThinnestPointAngleField;
+
+        private bool cribPerimeterThinnestPointAngleFieldSpecified;
+
+        private double cribPerimeterThinnestPointThicknessField;
+
+        private bool cribPerimeterThinnestPointThicknessFieldSpecified;
+
+        private double designedAdditionPowerField;
+
+        private bool designedAdditionPowerFieldSpecified;
+
+        private int designedDistanceReferencePointCylinderAxisField;
+
+        private bool designedDistanceReferencePointCylinderAxisFieldSpecified;
+
+        private double designedDistanceReferencePointCylinderPowerField;
+
+        private bool designedDistanceReferencePointCylinderPowerFieldSpecified;
+
+        private double designedDistanceReferencePointSpherePowerField;
+
+        private bool designedDistanceReferencePointSpherePowerFieldSpecified;
+
+        private int designedLayoutReferencePointCylinderAxisField;
+
+        private bool designedLayoutReferencePointCylinderAxisFieldSpecified;
+
+        private double designedLayoutReferencePointCylinderPowerField;
+
+        private bool designedLayoutReferencePointCylinderPowerFieldSpecified;
+
+        private double designedLayoutReferencePointSpherePowerField;
+
+        private bool designedLayoutReferencePointSpherePowerFieldSpecified;
+
+        private int designedNearReferencePointCylinderAxisField;
+
+        private bool designedNearReferencePointCylinderAxisFieldSpecified;
+
+        private double designedNearReferencePointCylinderPowerField;
+
+        private bool designedNearReferencePointCylinderPowerFieldSpecified;
+
+        private double designedNearReferencePointSpherePowerField;
+
+        private bool designedNearReferencePointSpherePowerFieldSpecified;
+
+        private int designedPrismBaseSettingField;
+
+        private bool designedPrismBaseSettingFieldSpecified;
+
+        private double designedPrismMagnitudeField;
+
+        private bool designedPrismMagnitudeFieldSpecified;
+
+        private double finishedCenterThicknessField;
+
+        private bool finishedCenterThicknessFieldSpecified;
+
+        private double lapBaseCurveField;
+
+        private bool lapBaseCurveFieldSpecified;
+
+        private double lapCrossCurveField;
+
+        private bool lapCrossCurveFieldSpecified;
+
+        private double surfaceBlockCenterGeneratorThicknessField;
+
+        private bool surfaceBlockCenterGeneratorThicknessFieldSpecified;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
-        public computeLensResponseSideDTO value
+        public int cribPerimeterThickestPointAngle
         {
             get
             {
-                return this.valueField;
+                return this.cribPerimeterThickestPointAngleField;
             }
             set
             {
-                this.valueField = value;
+                this.cribPerimeterThickestPointAngleField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cribPerimeterThickestPointAngleSpecified
+        {
+            get
+            {
+                return this.cribPerimeterThickestPointAngleFieldSpecified;
+            }
+            set
+            {
+                this.cribPerimeterThickestPointAngleFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public double cribPerimeterThickestPointThickness
+        {
+            get
+            {
+                return this.cribPerimeterThickestPointThicknessField;
+            }
+            set
+            {
+                this.cribPerimeterThickestPointThicknessField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cribPerimeterThickestPointThicknessSpecified
+        {
+            get
+            {
+                return this.cribPerimeterThickestPointThicknessFieldSpecified;
+            }
+            set
+            {
+                this.cribPerimeterThickestPointThicknessFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public int cribPerimeterThinnestPointAngle
+        {
+            get
+            {
+                return this.cribPerimeterThinnestPointAngleField;
+            }
+            set
+            {
+                this.cribPerimeterThinnestPointAngleField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cribPerimeterThinnestPointAngleSpecified
+        {
+            get
+            {
+                return this.cribPerimeterThinnestPointAngleFieldSpecified;
+            }
+            set
+            {
+                this.cribPerimeterThinnestPointAngleFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public double cribPerimeterThinnestPointThickness
+        {
+            get
+            {
+                return this.cribPerimeterThinnestPointThicknessField;
+            }
+            set
+            {
+                this.cribPerimeterThinnestPointThicknessField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cribPerimeterThinnestPointThicknessSpecified
+        {
+            get
+            {
+                return this.cribPerimeterThinnestPointThicknessFieldSpecified;
+            }
+            set
+            {
+                this.cribPerimeterThinnestPointThicknessFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public double designedAdditionPower
+        {
+            get
+            {
+                return this.designedAdditionPowerField;
+            }
+            set
+            {
+                this.designedAdditionPowerField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedAdditionPowerSpecified
+        {
+            get
+            {
+                return this.designedAdditionPowerFieldSpecified;
+            }
+            set
+            {
+                this.designedAdditionPowerFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public int designedDistanceReferencePointCylinderAxis
+        {
+            get
+            {
+                return this.designedDistanceReferencePointCylinderAxisField;
+            }
+            set
+            {
+                this.designedDistanceReferencePointCylinderAxisField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedDistanceReferencePointCylinderAxisSpecified
+        {
+            get
+            {
+                return this.designedDistanceReferencePointCylinderAxisFieldSpecified;
+            }
+            set
+            {
+                this.designedDistanceReferencePointCylinderAxisFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public double designedDistanceReferencePointCylinderPower
+        {
+            get
+            {
+                return this.designedDistanceReferencePointCylinderPowerField;
+            }
+            set
+            {
+                this.designedDistanceReferencePointCylinderPowerField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedDistanceReferencePointCylinderPowerSpecified
+        {
+            get
+            {
+                return this.designedDistanceReferencePointCylinderPowerFieldSpecified;
+            }
+            set
+            {
+                this.designedDistanceReferencePointCylinderPowerFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public double designedDistanceReferencePointSpherePower
+        {
+            get
+            {
+                return this.designedDistanceReferencePointSpherePowerField;
+            }
+            set
+            {
+                this.designedDistanceReferencePointSpherePowerField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedDistanceReferencePointSpherePowerSpecified
+        {
+            get
+            {
+                return this.designedDistanceReferencePointSpherePowerFieldSpecified;
+            }
+            set
+            {
+                this.designedDistanceReferencePointSpherePowerFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public int designedLayoutReferencePointCylinderAxis
+        {
+            get
+            {
+                return this.designedLayoutReferencePointCylinderAxisField;
+            }
+            set
+            {
+                this.designedLayoutReferencePointCylinderAxisField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedLayoutReferencePointCylinderAxisSpecified
+        {
+            get
+            {
+                return this.designedLayoutReferencePointCylinderAxisFieldSpecified;
+            }
+            set
+            {
+                this.designedLayoutReferencePointCylinderAxisFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
+        public double designedLayoutReferencePointCylinderPower
+        {
+            get
+            {
+                return this.designedLayoutReferencePointCylinderPowerField;
+            }
+            set
+            {
+                this.designedLayoutReferencePointCylinderPowerField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedLayoutReferencePointCylinderPowerSpecified
+        {
+            get
+            {
+                return this.designedLayoutReferencePointCylinderPowerFieldSpecified;
+            }
+            set
+            {
+                this.designedLayoutReferencePointCylinderPowerFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
+        public double designedLayoutReferencePointSpherePower
+        {
+            get
+            {
+                return this.designedLayoutReferencePointSpherePowerField;
+            }
+            set
+            {
+                this.designedLayoutReferencePointSpherePowerField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedLayoutReferencePointSpherePowerSpecified
+        {
+            get
+            {
+                return this.designedLayoutReferencePointSpherePowerFieldSpecified;
+            }
+            set
+            {
+                this.designedLayoutReferencePointSpherePowerFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 11)]
+        public int designedNearReferencePointCylinderAxis
+        {
+            get
+            {
+                return this.designedNearReferencePointCylinderAxisField;
+            }
+            set
+            {
+                this.designedNearReferencePointCylinderAxisField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedNearReferencePointCylinderAxisSpecified
+        {
+            get
+            {
+                return this.designedNearReferencePointCylinderAxisFieldSpecified;
+            }
+            set
+            {
+                this.designedNearReferencePointCylinderAxisFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 12)]
+        public double designedNearReferencePointCylinderPower
+        {
+            get
+            {
+                return this.designedNearReferencePointCylinderPowerField;
+            }
+            set
+            {
+                this.designedNearReferencePointCylinderPowerField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedNearReferencePointCylinderPowerSpecified
+        {
+            get
+            {
+                return this.designedNearReferencePointCylinderPowerFieldSpecified;
+            }
+            set
+            {
+                this.designedNearReferencePointCylinderPowerFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 13)]
+        public double designedNearReferencePointSpherePower
+        {
+            get
+            {
+                return this.designedNearReferencePointSpherePowerField;
+            }
+            set
+            {
+                this.designedNearReferencePointSpherePowerField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedNearReferencePointSpherePowerSpecified
+        {
+            get
+            {
+                return this.designedNearReferencePointSpherePowerFieldSpecified;
+            }
+            set
+            {
+                this.designedNearReferencePointSpherePowerFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 14)]
+        public int designedPrismBaseSetting
+        {
+            get
+            {
+                return this.designedPrismBaseSettingField;
+            }
+            set
+            {
+                this.designedPrismBaseSettingField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedPrismBaseSettingSpecified
+        {
+            get
+            {
+                return this.designedPrismBaseSettingFieldSpecified;
+            }
+            set
+            {
+                this.designedPrismBaseSettingFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 15)]
+        public double designedPrismMagnitude
+        {
+            get
+            {
+                return this.designedPrismMagnitudeField;
+            }
+            set
+            {
+                this.designedPrismMagnitudeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool designedPrismMagnitudeSpecified
+        {
+            get
+            {
+                return this.designedPrismMagnitudeFieldSpecified;
+            }
+            set
+            {
+                this.designedPrismMagnitudeFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 16)]
+        public double finishedCenterThickness
+        {
+            get
+            {
+                return this.finishedCenterThicknessField;
+            }
+            set
+            {
+                this.finishedCenterThicknessField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool finishedCenterThicknessSpecified
+        {
+            get
+            {
+                return this.finishedCenterThicknessFieldSpecified;
+            }
+            set
+            {
+                this.finishedCenterThicknessFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 17)]
+        public double lapBaseCurve
+        {
+            get
+            {
+                return this.lapBaseCurveField;
+            }
+            set
+            {
+                this.lapBaseCurveField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool lapBaseCurveSpecified
+        {
+            get
+            {
+                return this.lapBaseCurveFieldSpecified;
+            }
+            set
+            {
+                this.lapBaseCurveFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 18)]
+        public double lapCrossCurve
+        {
+            get
+            {
+                return this.lapCrossCurveField;
+            }
+            set
+            {
+                this.lapCrossCurveField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool lapCrossCurveSpecified
+        {
+            get
+            {
+                return this.lapCrossCurveFieldSpecified;
+            }
+            set
+            {
+                this.lapCrossCurveFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 19)]
+        public double surfaceBlockCenterGeneratorThickness
+        {
+            get
+            {
+                return this.surfaceBlockCenterGeneratorThicknessField;
+            }
+            set
+            {
+                this.surfaceBlockCenterGeneratorThicknessField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool surfaceBlockCenterGeneratorThicknessSpecified
+        {
+            get
+            {
+                return this.surfaceBlockCenterGeneratorThicknessFieldSpecified;
+            }
+            set
+            {
+                this.surfaceBlockCenterGeneratorThicknessFieldSpecified = value;
             }
         }
     }
@@ -1861,14 +1656,110 @@ namespace Org.Visiontech.Compute
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public partial class analyzeLensResponseDTO : computeResponseDTO
+    public partial class computeLensResponseSideDTO : computeLensResponseOmaSideDTO
     {
 
-        private analyzedPointDTO[] pointsField;
+        private double crossPositionField;
+
+        private bool crossPositionFieldSpecified;
+
+        private double downsetField;
+
+        private bool downsetFieldSpecified;
+
+        private double insetField;
+
+        private bool insetFieldSpecified;
+
+        private threeDimensionalPointDTO[] pointsField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("points", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 0)]
-        public analyzedPointDTO[] points
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public double crossPosition
+        {
+            get
+            {
+                return this.crossPositionField;
+            }
+            set
+            {
+                this.crossPositionField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool crossPositionSpecified
+        {
+            get
+            {
+                return this.crossPositionFieldSpecified;
+            }
+            set
+            {
+                this.crossPositionFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public double downset
+        {
+            get
+            {
+                return this.downsetField;
+            }
+            set
+            {
+                this.downsetField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool downsetSpecified
+        {
+            get
+            {
+                return this.downsetFieldSpecified;
+            }
+            set
+            {
+                this.downsetFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public double inset
+        {
+            get
+            {
+                return this.insetField;
+            }
+            set
+            {
+                this.insetField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool insetSpecified
+        {
+            get
+            {
+                return this.insetFieldSpecified;
+            }
+            set
+            {
+                this.insetFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("points", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 3)]
+        public threeDimensionalPointDTO[] points
         {
             get
             {
@@ -1882,173 +1773,41 @@ namespace Org.Visiontech.Compute
     }
 
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(requestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNativeLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeComposedLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAestheticLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNearLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAcquiredLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMonofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(responseDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeResponseDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensResponseDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public partial class analyzedPointDTO : threeDimensionalPointDTO
+    public abstract partial class messageDTO
     {
-
-        private double cylinderAxisField;
-
-        private bool cylinderAxisFieldSpecified;
-
-        private double cylinderMapField;
-
-        private bool cylinderMapFieldSpecified;
-
-        private double powerAxisField;
-
-        private bool powerAxisFieldSpecified;
-
-        private double powerMapField;
-
-        private bool powerMapFieldSpecified;
-
-        private double thicknessField;
-
-        private bool thicknessFieldSpecified;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
-        public double cylinderAxis
-        {
-            get
-            {
-                return this.cylinderAxisField;
-            }
-            set
-            {
-                this.cylinderAxisField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool cylinderAxisSpecified
-        {
-            get
-            {
-                return this.cylinderAxisFieldSpecified;
-            }
-            set
-            {
-                this.cylinderAxisFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
-        public double cylinderMap
-        {
-            get
-            {
-                return this.cylinderMapField;
-            }
-            set
-            {
-                this.cylinderMapField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool cylinderMapSpecified
-        {
-            get
-            {
-                return this.cylinderMapFieldSpecified;
-            }
-            set
-            {
-                this.cylinderMapFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
-        public double powerAxis
-        {
-            get
-            {
-                return this.powerAxisField;
-            }
-            set
-            {
-                this.powerAxisField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool powerAxisSpecified
-        {
-            get
-            {
-                return this.powerAxisFieldSpecified;
-            }
-            set
-            {
-                this.powerAxisFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
-        public double powerMap
-        {
-            get
-            {
-                return this.powerMapField;
-            }
-            set
-            {
-                this.powerMapField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool powerMapSpecified
-        {
-            get
-            {
-                return this.powerMapFieldSpecified;
-            }
-            set
-            {
-                this.powerMapFieldSpecified = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
-        public double thickness
-        {
-            get
-            {
-                return this.thicknessField;
-            }
-            set
-            {
-                this.thicknessField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool thicknessSpecified
-        {
-            get
-            {
-                return this.thicknessFieldSpecified;
-            }
-            set
-            {
-                this.thicknessFieldSpecified = value;
-            }
-        }
     }
 
     /// <remarks/>
@@ -2057,18 +1816,24 @@ namespace Org.Visiontech.Compute
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNativeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeComposedLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAestheticLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNearLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAcquiredLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMonofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2083,18 +1848,24 @@ namespace Org.Visiontech.Compute
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNativeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeComposedLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAestheticLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNearLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAcquiredLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMonofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2107,18 +1878,24 @@ namespace Org.Visiontech.Compute
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNativeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeComposedLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAestheticLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNearLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAcquiredLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMonofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2498,12 +2275,14 @@ namespace Org.Visiontech.Compute
 
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeComposedLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAestheticLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNearLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -2557,11 +2336,176 @@ namespace Org.Visiontech.Compute
     }
 
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAestheticLensRequestDTO))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
+    public abstract partial class computeComposedLensRequestDTO : computeNativeLensRequestDTO
+    {
+
+        private double approximationFactorField;
+
+        private bool approximationFactorFieldSpecified;
+
+        private computeLensRequestDTO componentLensRequestField;
+
+        private int internalLensDiameterField;
+
+        private bool internalLensDiameterFieldSpecified;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public double approximationFactor
+        {
+            get
+            {
+                return this.approximationFactorField;
+            }
+            set
+            {
+                this.approximationFactorField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool approximationFactorSpecified
+        {
+            get
+            {
+                return this.approximationFactorFieldSpecified;
+            }
+            set
+            {
+                this.approximationFactorFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public computeLensRequestDTO componentLensRequest
+        {
+            get
+            {
+                return this.componentLensRequestField;
+            }
+            set
+            {
+                this.componentLensRequestField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public int internalLensDiameter
+        {
+            get
+            {
+                return this.internalLensDiameterField;
+            }
+            set
+            {
+                this.internalLensDiameterField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool internalLensDiameterSpecified
+        {
+            get
+            {
+                return this.internalLensDiameterFieldSpecified;
+            }
+            set
+            {
+                this.internalLensDiameterFieldSpecified = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
+    public partial class computeAestheticLensRequestDTO : computeComposedLensRequestDTO
+    {
+
+        private int junctionDiameterField;
+
+        private bool junctionDiameterFieldSpecified;
+
+        private int sideAngleField;
+
+        private bool sideAngleFieldSpecified;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public int junctionDiameter
+        {
+            get
+            {
+                return this.junctionDiameterField;
+            }
+            set
+            {
+                this.junctionDiameterField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool junctionDiameterSpecified
+        {
+            get
+            {
+                return this.junctionDiameterFieldSpecified;
+            }
+            set
+            {
+                this.junctionDiameterFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public int sideAngle
+        {
+            get
+            {
+                return this.sideAngleField;
+            }
+            set
+            {
+                this.sideAngleField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool sideAngleSpecified
+        {
+            get
+            {
+                return this.sideAngleFieldSpecified;
+            }
+            set
+            {
+                this.sideAngleFieldSpecified = value;
+            }
+        }
+    }
+
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -2610,7 +2554,7 @@ namespace Org.Visiontech.Compute
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeIprogLensRequestDTO : computeNearLensRequestDTO
+    public partial class computeIprofLensRequestDTO : computeNearLensRequestDTO
     {
     }
 
@@ -2620,13 +2564,13 @@ namespace Org.Visiontech.Compute
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeIprofLensRequestDTO : computeNearLensRequestDTO
+    public partial class computeIprogLensRequestDTO : computeNearLensRequestDTO
     {
     }
 
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
@@ -2675,7 +2619,7 @@ namespace Org.Visiontech.Compute
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeVarioLensRequestDTO : computeFarLensRequestDTO
+    public partial class computeIflexLensRequestDTO : computeFarLensRequestDTO
     {
     }
 
@@ -2685,7 +2629,7 @@ namespace Org.Visiontech.Compute
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeIflexLensRequestDTO : computeFarLensRequestDTO
+    public partial class computeVarioLensRequestDTO : computeFarLensRequestDTO
     {
     }
 
@@ -2700,10 +2644,14 @@ namespace Org.Visiontech.Compute
     }
 
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMonofLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2719,7 +2667,7 @@ namespace Org.Visiontech.Compute
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeFantasyLensRequestDTO : computeAcquiredLensRequestDTO
+    public partial class computeMonofLensRequestDTO : computeAcquiredLensRequestDTO
     {
     }
 
@@ -2739,6 +2687,46 @@ namespace Org.Visiontech.Compute
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
+    public partial class computeAntifatigueLensRequestDTO : computeAcquiredLensRequestDTO
+    {
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
+    public partial class computeBasicLensRequestDTO : computeAcquiredLensRequestDTO
+    {
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
+    public partial class compute4K07LensRequestDTO : computeAcquiredLensRequestDTO
+    {
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
+    public partial class computeFantasyLensRequestDTO : computeAcquiredLensRequestDTO
+    {
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
     public partial class computeOfficeLensRequestDTO : computeAcquiredLensRequestDTO
     {
     }
@@ -2749,8 +2737,255 @@ namespace Org.Visiontech.Compute
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeMonofLensRequestDTO : computeAcquiredLensRequestDTO
+    public partial class compute4K09LensRequestDTO : computeAcquiredLensRequestDTO
     {
+    }
+
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeResponseDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensResponseDTO))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
+    public abstract partial class responseDTO : messageDTO
+    {
+    }
+
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensResponseDTO))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
+    public abstract partial class computeResponseDTO : responseDTO
+    {
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
+    public partial class analyzeLensResponseDTO : computeResponseDTO
+    {
+
+        private analyzedPointDTO[] pointsField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("points", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 0)]
+        public analyzedPointDTO[] points
+        {
+            get
+            {
+                return this.pointsField;
+            }
+            set
+            {
+                this.pointsField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
+    public partial class analyzedPointDTO : threeDimensionalPointDTO
+    {
+
+        private double cylinderAxisField;
+
+        private bool cylinderAxisFieldSpecified;
+
+        private double cylinderMapField;
+
+        private bool cylinderMapFieldSpecified;
+
+        private double powerAxisField;
+
+        private bool powerAxisFieldSpecified;
+
+        private double powerMapField;
+
+        private bool powerMapFieldSpecified;
+
+        private double thicknessField;
+
+        private bool thicknessFieldSpecified;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public double cylinderAxis
+        {
+            get
+            {
+                return this.cylinderAxisField;
+            }
+            set
+            {
+                this.cylinderAxisField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cylinderAxisSpecified
+        {
+            get
+            {
+                return this.cylinderAxisFieldSpecified;
+            }
+            set
+            {
+                this.cylinderAxisFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public double cylinderMap
+        {
+            get
+            {
+                return this.cylinderMapField;
+            }
+            set
+            {
+                this.cylinderMapField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cylinderMapSpecified
+        {
+            get
+            {
+                return this.cylinderMapFieldSpecified;
+            }
+            set
+            {
+                this.cylinderMapFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public double powerAxis
+        {
+            get
+            {
+                return this.powerAxisField;
+            }
+            set
+            {
+                this.powerAxisField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool powerAxisSpecified
+        {
+            get
+            {
+                return this.powerAxisFieldSpecified;
+            }
+            set
+            {
+                this.powerAxisFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public double powerMap
+        {
+            get
+            {
+                return this.powerMapField;
+            }
+            set
+            {
+                this.powerMapField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool powerMapSpecified
+        {
+            get
+            {
+                return this.powerMapFieldSpecified;
+            }
+            set
+            {
+                this.powerMapFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public double thickness
+        {
+            get
+            {
+                return this.thicknessField;
+            }
+            set
+            {
+                this.thicknessField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool thicknessSpecified
+        {
+            get
+            {
+                return this.thicknessFieldSpecified;
+            }
+            set
+            {
+                this.thicknessFieldSpecified = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "4.7.3081.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://soap.service.optoplus.visiontech.org/")]
+    public partial class computeLensResponseDTO : computeResponseDTO
+    {
+
+        private computeLensResponseSideDTO valueField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public computeLensResponseSideDTO value
+        {
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
+        }
     }
 
     [System.Diagnostics.DebuggerStepThroughAttribute()]

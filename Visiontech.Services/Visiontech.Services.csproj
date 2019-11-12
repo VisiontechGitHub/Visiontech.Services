@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.ServiceModel.Http" Version="4.4.4" />
-    <PackageReference Include="Visiontech.Commons" Version="1.0.37" />
+    <PackageReference Include="Visiontech.Commons" Version="1.0.39" />
   </ItemGroup>
 
 </Project>
