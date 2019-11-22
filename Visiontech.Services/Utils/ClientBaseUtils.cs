@@ -18,7 +18,11 @@ namespace Visiontech.Services.Utils
         {
             BasicHttpBinding binding = new BasicHttpBinding
             {
-                MaxReceivedMessageSize = 2147483647
+                MaxReceivedMessageSize = 2147483647,
+                OpenTimeout = new TimeSpan(0, 10, 0),
+                CloseTimeout = new TimeSpan(0, 10, 0),
+                SendTimeout = new TimeSpan(0, 10, 0),
+                ReceiveTimeout = new TimeSpan(0, 10, 0)
             };
             binding.Security.Mode = string.Equals(endpoint.Uri.Scheme, "https") ? BasicHttpSecurityMode.Transport : BasicHttpSecurityMode.None;
             binding.Security.Transport.ClientCredentialType = string.Equals(endpoint.Uri.Scheme, "https") ? HttpClientCredentialType.None : HttpClientCredentialType.Basic;
