@@ -1,33 +1,27 @@
 ﻿{
   "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
-  "Version": "15.0.30730.948",
+  "Version": "15.0.20628.921",
   "GettingStartedDocument": {
     "Uri": "https://go.microsoft.com/fwlink/?linkid=858517"
   },
   "ExtendedData": {
-    "inputs": [
-      "https://services.test.optoplus.cloud/optoplus-services-web/ComputeSoap?wsdl"
-    ],
-    "collectionTypes": [
-      "System.Array",
-      "System.Collections.Generic.Dictionary`2"
-    ],
-    "namespaceMappings": [
-      "*, Org.Visiontech.Compute"
-    ],
-    "references": [
-      "Microsoft.Extensions.DependencyInjection, {Microsoft.Extensions.DependencyInjection, 3.0.0}",
-      "Microsoft.Extensions.DependencyInjection.Abstractions, {Microsoft.Extensions.DependencyInjection.Abstractions, 3.0.0}",
-      "System.Reflection.DispatchProxy, {System.Reflection.DispatchProxy, 4.4.0}",
-      "System.ServiceModel, {System.ServiceModel.Primitives, 4.4.4}",
-      "System.ServiceModel.Duplex, {System.ServiceModel.Duplex, 4.4.4}",
-      "System.ServiceModel.Http, {System.ServiceModel.Http, 4.4.4}",
-      "System.ServiceModel.NetTcp, {System.ServiceModel.NetTcp, 4.4.4}",
-      "System.ServiceModel.Primitives, {System.ServiceModel.Primitives, 4.4.4}",
-      "System.ServiceModel.Security, {System.ServiceModel.Security, 4.4.4}",
-      "Visiontech.Commons, {Visiontech.Commons, 1.0.39}"
-    ],
-    "targetFramework": "netstandard2.0",
-    "typeReuseMode": "All"
+    "Uri": "https://services.optoplus.cloud/optoplus-services-web/ComputeSoap?wsdl",
+    "Namespace": "Org.Visiontech.Compute",
+    "SelectedAccessLevelForGeneratedClass": "Public",
+    "GenerateMessageContract": false,
+    "ReuseTypesinReferencedAssemblies": true,
+    "ReuseTypesinAllReferencedAssemblies": true,
+    "CollectionTypeReference": {
+      "Item1": "System.Array",
+      "Item2": "System.Runtime.dll"
+    },
+    "DictionaryCollectionTypeReference": {
+      "Item1": "System.Collections.Generic.Dictionary`2",
+      "Item2": "System.Collections.dll"
+    },
+    "CheckedReferencedAssemblies": [],
+    "InstanceId": null,
+    "Name": "Org.Visiontech.Compute",
+    "Metadata": {}
   }
 }

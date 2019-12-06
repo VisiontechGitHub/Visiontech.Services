@@ -20,6 +20,10 @@ namespace Visiontech.Services.Utils
 
             if (HttpRequestMessageProperty is object)
             {
+                if (request.Properties.ContainsKey(HttpRequestMessageProperty.Name))
+                {
+                    request.Properties.Remove(HttpRequestMessageProperty.Name);
+                }
                 request.Properties.Add(HttpRequestMessageProperty.Name, HttpRequestMessageProperty);
             }
 
