@@ -1753,35 +1753,37 @@ namespace Org.Visiontech.Compute
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(responseDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeResponseDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensResponseDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(requestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAcquiredLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblRegularLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K13LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K11LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblRegularLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblUltraShortLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblExtraShortLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblShortLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblUltraShortLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNativeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeComposedLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAestheticLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMonofLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNearLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1792,8 +1794,8 @@ namespace Org.Visiontech.Compute
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeResponseDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensResponseDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
@@ -1802,13 +1804,37 @@ namespace Org.Visiontech.Compute
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensResponseDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensResponseDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
     public abstract partial class computeResponseDTO : responseDTO
     {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class computeLensResponseDTO : computeResponseDTO
+    {
+        
+        private computeLensResponseSideDTO valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public computeLensResponseSideDTO value
+        {
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -2004,56 +2030,34 @@ namespace Org.Visiontech.Compute
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeLensResponseDTO : computeResponseDTO
-    {
-        
-        private computeLensResponseSideDTO valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public computeLensResponseSideDTO value
-        {
-            get
-            {
-                return this.valueField;
-            }
-            set
-            {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAcquiredLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblRegularLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K13LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K11LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblRegularLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblUltraShortLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblExtraShortLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblShortLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblUltraShortLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNativeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeComposedLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAestheticLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMonofLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNearLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2066,28 +2070,30 @@ namespace Org.Visiontech.Compute
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(analyzeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAcquiredLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblRegularLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K13LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K11LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblRegularLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblUltraShortLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblExtraShortLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblShortLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblUltraShortLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNativeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeComposedLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAestheticLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMonofLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNearLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2098,28 +2104,30 @@ namespace Org.Visiontech.Compute
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAcquiredLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblRegularLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K13LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K11LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblRegularLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblUltraShortLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblExtraShortLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblShortLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblUltraShortLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNativeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeComposedLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAestheticLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMonofLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNearLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2497,29 +2505,23 @@ namespace Org.Visiontech.Compute
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblRegularLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeOfficeLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K13LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K11LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblRegularLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblUltraShortLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFantasyLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblExtraShortLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAntifatigueLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K09LensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblShortLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(compute4K07LensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeEblUltraShortLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeBasicLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMagicLensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
     public abstract partial class computeAcquiredLensRequestDTO : computeLensRequestDTO
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeEblRegularLensRequestDTO : computeAcquiredLensRequestDTO
     {
     }
     
@@ -2535,7 +2537,55 @@ namespace Org.Visiontech.Compute
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeMagicLensRequestDTO : computeAcquiredLensRequestDTO
+    public partial class compute4K13LensRequestDTO : computeAcquiredLensRequestDTO
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class compute4K09LensRequestDTO : computeAcquiredLensRequestDTO
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class compute4K11LensRequestDTO : computeAcquiredLensRequestDTO
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class computeEblRegularLensRequestDTO : computeAcquiredLensRequestDTO
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class computeEblUltraShortLensRequestDTO : computeAcquiredLensRequestDTO
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class compute4K07LensRequestDTO : computeAcquiredLensRequestDTO
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class computeAntifatigueLensRequestDTO : computeAcquiredLensRequestDTO
     {
     }
     
@@ -2559,7 +2609,7 @@ namespace Org.Visiontech.Compute
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeAntifatigueLensRequestDTO : computeAcquiredLensRequestDTO
+    public partial class computeEblShortLensRequestDTO : computeAcquiredLensRequestDTO
     {
     }
     
@@ -2575,45 +2625,21 @@ namespace Org.Visiontech.Compute
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class compute4K09LensRequestDTO : computeAcquiredLensRequestDTO
+    public partial class computeMagicLensRequestDTO : computeAcquiredLensRequestDTO
     {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeEblShortLensRequestDTO : computeAcquiredLensRequestDTO
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class compute4K07LensRequestDTO : computeAcquiredLensRequestDTO
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeEblUltraShortLensRequestDTO : computeAcquiredLensRequestDTO
-    {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeComposedLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeAestheticLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computePunctualLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeMonofLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeNearLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2652,14 +2678,6 @@ namespace Org.Visiontech.Compute
                 this.channelFieldSpecified = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class computePunctualLensRequestDTO : computeNativeLensRequestDTO
-    {
     }
     
     /// <remarks/>
@@ -2827,6 +2845,14 @@ namespace Org.Visiontech.Compute
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
+    public partial class computePunctualLensRequestDTO : computeNativeLensRequestDTO
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
     public partial class computeMonofLensRequestDTO : computeNativeLensRequestDTO
     {
     }
@@ -2835,8 +2861,8 @@ namespace Org.Visiontech.Compute
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprogLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIprofLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeFarLensRequestDTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2894,8 +2920,8 @@ namespace Org.Visiontech.Compute
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeDigitLensRequestDTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeVarioLensRequestDTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computeIflexLensRequestDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2940,7 +2966,7 @@ namespace Org.Visiontech.Compute
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeVarioLensRequestDTO : computeFarLensRequestDTO
+    public partial class computeDigitLensRequestDTO : computeFarLensRequestDTO
     {
     }
     
@@ -2948,7 +2974,7 @@ namespace Org.Visiontech.Compute
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.service.optoplus.visiontech.org/")]
-    public partial class computeDigitLensRequestDTO : computeFarLensRequestDTO
+    public partial class computeVarioLensRequestDTO : computeFarLensRequestDTO
     {
     }
     

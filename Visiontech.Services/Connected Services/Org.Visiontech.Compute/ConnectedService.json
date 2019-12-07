@@ -1,9 +1,6 @@
 ﻿{
   "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
   "Version": "15.0.20628.921",
-  "GettingStartedDocument": {
-    "Uri": "https://go.microsoft.com/fwlink/?linkid=858517"
-  },
   "ExtendedData": {
     "Uri": "https://services.optoplus.cloud/optoplus-services-web/ComputeSoap?wsdl",
     "Namespace": "Org.Visiontech.Compute",
